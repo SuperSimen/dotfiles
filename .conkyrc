@@ -1,0 +1,43 @@
+# Conky settings #
+background yes
+update_interval 1
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+gap_x 0
+gap_y 0
+alignment middle_middle
+minimum_size 600 360
+maximum_width 600
+own_window no
+
+# Graphics settings #
+draw_shades no
+draw_outline no 
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Raleway:size=10
+
+override_utf8_locale yes
+
+imlib_cache_size 0
+
+# Color scheme #
+default_color FFFFFF
+
+color1 FFFFFF
+
+TEXT
+\
+#---Clock+Date---#
+\
+\
+${font Raleway:weight=Light :size=100}${alignc}${time %H}${alignc}:${alignc}${time %M}
+${font Raleway:weight=Light:size=32}${voffset -60}${alignc}${time %A %B %d}\
+\
+\
