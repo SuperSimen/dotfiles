@@ -1,0 +1,16 @@
+#! /bin/bash
+
+function DPConnected {
+	! xrandr | grep -c "DP-1 disconnected"
+}
+
+function enableDP {
+	if $1
+	then
+		xrandr --output DP-1 --auto --output LVDS-1 --off
+	else
+		xrandr --output LVDS-1 --auto
+	fi
+}
+
+enableDP DPConnected
