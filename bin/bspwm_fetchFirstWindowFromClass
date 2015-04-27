@@ -1,0 +1,5 @@
+#! /bin/bash
+
+windowID=$(bspc query -T | grep -i $1 | cut -d " " -f 4 | head -n1)
+bspc window $windowID -w focused
+bspc window -f $windowID

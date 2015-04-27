@@ -92,6 +92,13 @@ super + space
 alt + space
 	lighthouse | sh
 
+ctrl + space ; {v,f,s}
+	{urxvt -e vim, firefox, spotify}
+
+super + {_,shift + }minus
+	bspwm_cycleWindowsOfSameClass {next,prev}
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+

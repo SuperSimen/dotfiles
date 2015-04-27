@@ -7,8 +7,10 @@ function DPConnected {
 function enableDP {
 	if $1
 	then
+		echo yeah
 		xrandr --output DP-1 --auto --output LVDS-1 --off
 	else
+		echo nope
 		xrandr --output LVDS-1 --auto
 	fi
 }

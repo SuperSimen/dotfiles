@@ -184,3 +184,5 @@ let g:UltiSnipsExpandTrigger="<c-d>"
 set backspace=2
 
 cmap w!! w !sudo tee > /dev/null %
+
+let g:CommandTFileScanner="find"
