@@ -1,0 +1,30 @@
+#! /bin/bash
+
+function isUSBKeyboardConnected {
+	xinput | grep -ci "usb keyboard"
+}
+
+function applyUSBKeyboardConfig {
+	setxkbmap -model applealu_iso -layout no -option lv3:lwin_switch,altwin:swap_alt_win
+}
+
+function applyOnboardKeyboardConfig {
+	setxkbmap -model applealu_iso -layout no -option lv3:lalt_switch,caps:ctrl_modifier
+}
+
+function clearKeyboardConfig {
+	setxkbmap -option
+}
+
+function applyCorrectKeyboardConfig {
+	clearKeyboardConfig
+
+	if isUSBKeyboardConnected
+	then
+		applyUSBKeyboardConfig
+	else
+		applyOnboardKeyboardConfig
+	fi
+}
+
+applyCorrectKeyboardConfig

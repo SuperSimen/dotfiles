@@ -92,8 +92,8 @@ super + space
 alt + space
 	lighthouse | sh
 
-ctrl + space ; {v,f,s}
-	{urxvt -e vim, firefox, spotify}
+ctrl + space ; {v,f,s,c}
+	{urxvt -e vim, firefox, spotify, chromium}
 
 super + {_,shift + }minus
 	bspwm_cycleWindowsOfSameClass {next,prev}
