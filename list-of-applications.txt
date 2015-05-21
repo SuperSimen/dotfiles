@@ -1,0 +1,7 @@
+thunar
+filelight
+mpv
+llpp
+gvim
+ghc
+aura
