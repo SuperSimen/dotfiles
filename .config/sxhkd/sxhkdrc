@@ -14,14 +14,14 @@ super + t
 super + b
 	bspc desktop -B
 
+super + e
+	bspc desktop -E
+
 super + {s,f}
 	bspc window -t {floating,fullscreen}
 
 super + Tab
 	bspc desktop -f last
-
-alt +Tab 
-	bspc window -f last
 
 super + apostrophe
 	bspc window -s last

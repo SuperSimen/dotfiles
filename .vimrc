@@ -14,15 +14,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'tpope/vim-repeat'
 Plugin 'bling/vim-airline'
-Plugin 'rstacruz/sparkup'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'docunext/closetag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mileszs/ack.vim'
 Plugin 'wincent/command-t'
@@ -35,23 +32,24 @@ Plugin 'whatyouhide/vim-gotham'
 " Plugin 'w0ng/vim-hybrid'
 " Plugin 'tomasr/molokai'
 " Plugin 'flazz/vim-colorschemes'
-
-" Plugin 'scrooloose/nerdcommenter'
-" Plugin 'kien/rainbow_parentheses.vim'
-" Plugin 'vim-scripts/YankRing.vim'
-" Plugin 'kien/ctrlp.vim'
-" Plugin 'Raimondi/delimitMate'
-" Plugin 'msanders/snipmate.vim'
-" Plugin 'Lokaltog/vim-easymotion'
-" Plugin 'ervandew/supertab'
-" Plugin 'vim-scripts/ShowMarks'
-" Plugin 'vim-scripts/taglist.vim'
-
 " Plugin 'tomasr/molokai'
 " Plugin 'nanotech/jellybeans.vim'
 " Plugin 'Lokaltog/vim-distinguished'
 " Plugin 'tpope/vim-vividchalk'
 
+" Plugin 'rstacruz/sparkup'
+" Plugin 'docunext/closetag.vim'
+" Plugin 'Raimondi/delimitMate'
+" Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'scrooloose/nerdcommenter'
+" Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'vim-scripts/YankRing.vim'
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'msanders/snipmate.vim'
+" Plugin 'Lokaltog/vim-easymotion'
+" Plugin 'ervandew/supertab'
+" Plugin 'vim-scripts/ShowMarks'
+" Plugin 'vim-scripts/taglist.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -83,7 +81,8 @@ set nrformats=
 set incsearch
 set hidden
 set ignorecase
-set tabstop=4
+set expandtab
+set softtabstop=4
 set shiftwidth=4
 set ruler
 set number
@@ -130,8 +129,8 @@ nnore <c-l> <c-w>l
 nnore , :
 nnore <silent> : ,
 
-inore <silent> <Down> <C-o>gj
-inore <silent> <Up> <C-o>gk
+"inore <silent> <Down> <C-o>gj
+"inore <silent> <Up> <C-o>gk
 nnore <silent> <Down> gj
 nnore <silent> <Up> gk
 
@@ -175,9 +174,9 @@ nmap <silent> <Leader>ev ,e /home/simen/.vimrc<CR>
 set completeopt-=preview
 " set relativenumber
 
-let g:UltiSnipsExpandTrigger="<c-d>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<c-h>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " set spell spelllang=en_us
 
@@ -186,3 +185,6 @@ set backspace=2
 cmap w!! w !sudo tee > /dev/null %
 
 let g:CommandTFileScanner="find"
+
+let @r='iO'
+nnore <Leader>r @r

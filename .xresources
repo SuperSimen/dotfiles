@@ -1,7 +1,4 @@
 URxvt.scrollBar: false
-URxvt.transparent: false
-URxvt.shading: 50
-URxvt.blurRadius: 50
 
 *.foreground:   #98d1ce
 *.background:   #0a0f14
