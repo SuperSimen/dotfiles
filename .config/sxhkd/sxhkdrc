@@ -98,6 +98,9 @@ ctrl + space ; {v,f,s,c}
 super + {_,shift + }minus
 	bspwm_cycleWindowsOfSameClass {next,prev}
 
+super + {_,shift + }r
+    bspc desktop -F {vertical,horizontal}
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

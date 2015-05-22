@@ -101,6 +101,5 @@ betterMyReverse xs = splitz xs []
         splitz [] a = a
         splitz (x:xs) a = splitz xs (x:a)
 
-name :: [Type] -> Type
-name [] = undefined
-name (x:xs) = undefined
+mySquare [] = []
+mySquare (x:xs) = x^2 : mySquare xs
