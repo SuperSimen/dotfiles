@@ -186,5 +186,4 @@ cmap w!! w !sudo tee > /dev/null %
 
 let g:CommandTFileScanner="find"
 
-let @r='iO'
-nnore <Leader>r @r
+nnore <Leader>r iO

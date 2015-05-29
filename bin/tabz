@@ -1,3 +1,0 @@
-#! /bin/bash
-
-wmctrl -l | awk '$2==0'

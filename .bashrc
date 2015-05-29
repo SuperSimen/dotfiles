@@ -9,4 +9,5 @@
 PS1='[\u@\h \W]\$ '
 
 alias osxHome="cd /mnt/osx/Users/simen"
+
 stty -ixon

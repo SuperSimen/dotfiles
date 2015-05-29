@@ -2,4 +2,4 @@
 
 main = interact parseInput
 
-parseInput x = tail x
+parseInput = unlines . init . lines

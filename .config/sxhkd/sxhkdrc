@@ -92,14 +92,17 @@ super + space
 alt + space
 	lighthouse | sh
 
-ctrl + space ; {v,f,s,c}
-	{urxvt -e vim, firefox, spotify, chromium}
+ctrl + space ; {v,f,s,l,n,c}
+	{urxvt -e vim, firefox, spotify, llpp, nautilus, urxvt -e vim ~/.config/sxhkd/sxhkdrc}
 
 super + {_,shift + }minus
 	bspwm_cycleWindowsOfSameClass {next,prev}
 
 super + {_,shift + }r
     bspc desktop -F {vertical,horizontal}
+
+super + {_,shift + }u
+    {hideActiveWindow,unhideLastHiddenWindow}
 
 # make sxhkd reload its configuration files:
 super + Escape
