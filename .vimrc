@@ -183,7 +183,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 set backspace=2
 
 cmap w!! w !sudo tee > /dev/null %
+cmap ack Ack!
 
 let g:CommandTFileScanner="find"
 
+set foldcolumn=1
 nnore <Leader>r iO
