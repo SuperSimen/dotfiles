@@ -189,4 +189,5 @@ cmap ack Ack!
 
 let g:CommandTFileScanner="find"
 
-nnore <Leader>i iO
+set foldcolumn=1
+nnore <Leader>r iO
