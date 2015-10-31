@@ -103,3 +103,17 @@ betterMyReverse xs = splitz xs []
 
 mySquare [] = []
 mySquare (x:xs) = x^2 : mySquare xs
+
+
+class MyFunctor f where
+    myfmap :: (a -> b) -> f a -> f b
+
+instance MyFunctor [] where
+    myfmap = map
+
+data Foo a = Foo a
+    deriving (Show)
+
+instance MyFunctor Foo where
+    myfmap f (Foo a) = Foo (f a)
+

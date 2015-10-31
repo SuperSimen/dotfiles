@@ -92,8 +92,8 @@ super + space
 alt + space
 	lighthouse | sh
 
-ctrl + space ; {v,f,s,l,n,c}
-	{urxvt -e vim, firefox, spotify, llpp, nautilus, urxvt -e vim ~/.config/sxhkd/sxhkdrc}
+ctrl + space ; {v,f,s,l,n,c,x}
+	{urxvt -e vim, firefox, spotify, llpp, nautilus, chromium, urxvt -e vim ~/.config/sxhkd/sxhkdrc}
 
 super + {_,shift + }minus
 	bspwm_cycleWindowsOfSameClass {next,prev}

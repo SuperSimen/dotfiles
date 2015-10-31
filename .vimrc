@@ -26,6 +26,8 @@ Plugin 'wincent/command-t'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 
+Plugin 'awk.vim'
+
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'whatyouhide/vim-gotham'
 " Plugin 'chriskempson/base16-vim'
@@ -172,7 +174,7 @@ nnore <silent> <BS> gg
 nmap <silent> <Leader>ev ,e /home/simen/.vimrc<CR>
 
 set completeopt-=preview
-" set relativenumber
+set relativenumber
 
 let g:UltiSnipsExpandTrigger="<c-h>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
@@ -183,7 +185,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 set backspace=2
 
 cmap w!! w !sudo tee > /dev/null %
+cmap ack Ack!
 
 let g:CommandTFileScanner="find"
 
-nnore <Leader>r iO
+nnore <Leader>i iO
