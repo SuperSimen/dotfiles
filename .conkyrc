@@ -38,6 +38,7 @@ TEXT
 \
 \
 ${font Raleway:weight=Light :size=100}${alignc}${time %H}${alignc}:${alignc}${time %M}
-${font Raleway:weight=Light:size=32}${voffset -60}${alignc}${time %A %B %d}\
+${font Raleway:weight=Light:size=32}${voffset -60}${alignc}${time %A %B %d}
+${font Raleway:weight=Light :size=50}${voffset 20}${alignc}${exec acpi | awk -F, '{print $2}'}
 \
 \
