@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=/home/simen/.vim/bundle/Vundle.vim
 " alternatively, pass a path where Vundle should install plugins
@@ -20,13 +21,11 @@ Plugin 'tpope/vim-repeat'
 Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'majutsushi/tagbar'
 Plugin 'mileszs/ack.vim'
 Plugin 'wincent/command-t'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
-
-Plugin 'awk.vim'
+Plugin 'rstacruz/sparkup'
 
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'whatyouhide/vim-gotham'
@@ -39,7 +38,8 @@ Plugin 'whatyouhide/vim-gotham'
 " Plugin 'Lokaltog/vim-distinguished'
 " Plugin 'tpope/vim-vividchalk'
 
-" Plugin 'rstacruz/sparkup'
+" Plugin 'majutsushi/tagbar'
+" Plugin 'awk.vim'
 " Plugin 'docunext/closetag.vim'
 " Plugin 'Raimondi/delimitMate'
 " Plugin 'nathanaelkane/vim-indent-guides'
@@ -92,22 +92,15 @@ set showcmd
 set smartcase
 set wrap
 set mouse=a
+set ttymouse=urxvt
 
 set background=dark
-" colorscheme base16-default
-" colorscheme solarized
 
 colorscheme gotham
-" let g:solarized_termcolors=256
-" let base16colorspace=256
 
-hi ErrorMsg term=bold gui=bold
-highlight Normal ctermbg=none
+" hi ErrorMsg term=bold gui=bold
+" highlight Normal ctermbg=none
 
-" if has('gui_running')
-" else
-	"colorscheme hybrid
-" endif
 
 set guifont=Menlo\ Regular:h13
 set noantialias
@@ -130,6 +123,8 @@ nnore <c-l> <c-w>l
 
 nnore , :
 nnore <silent> : ,
+vnore , :
+vnore <silent> : ,
 
 "inore <silent> <Down> <C-o>gj
 "inore <silent> <Up> <C-o>gk
@@ -148,7 +143,7 @@ nnore <silent> <C-y> 3<C-y>
 " let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map={ 'mode': 'active','active_filetypes': [],'passive_filetypes': ['html'] }
+"let g:syntastic_mode_map={ 'mode': 'active','active_filetypes': [],'passive_filetypes': ['html'] }
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
@@ -161,12 +156,11 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-
 vnore <silent> y y`]
 vnore <silent> p p`]
 nnore <silent> p p`]
 
-" nnore <silent> <Leader>td :TernDef<CR>
+nnore <silent> <Leader>td :TernDef<CR>
 
 nnore <silent> <CR> G
 nnore <silent> <BS> gg
@@ -184,10 +178,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 set backspace=2
 
-cmap w!! w !sudo tee > /dev/null %
-cmap ack Ack!
+" cmap w!! w !sudo tee > /dev/null %
 
 let g:CommandTFileScanner="find"
 
 set foldcolumn=1
-nnore <Leader>r iO
+nnore <Leader>i iO
