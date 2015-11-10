@@ -69,12 +69,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+colorscheme gotham
 
 let mapleader = "\<Space>"
-
-set history=1000
-
-set tabpagemax=50
 
 syntax on
 
@@ -93,17 +90,17 @@ set smartcase
 set wrap
 set mouse=a
 set ttymouse=urxvt
-
+set timeoutlen=1000
+set ttimeoutlen=10
+set history=1000
+set tabpagemax=50
 set background=dark
-
-colorscheme gotham
-
-" hi ErrorMsg term=bold gui=bold
-" highlight Normal ctermbg=none
-
-
+set backspace=2
 set guifont=Menlo\ Regular:h13
 set noantialias
+set completeopt-=preview
+set relativenumber
+set foldcolumn=1
 
 set directory=/home/simen/.vim/temp"
 set backupdir=/home/simen/.vim/backup"
@@ -156,9 +153,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-vnore <silent> y y`]
-vnore <silent> p p`]
-nnore <silent> p p`]
+" vnore <silent> y y`]
+" vnore <silent> p p`]
+" nnore <silent> p p`]
 
 nnore <silent> <Leader>td :TernDef<CR>
 
@@ -167,20 +164,13 @@ nnore <silent> <BS> gg
 
 nmap <silent> <Leader>ev ,e /home/simen/.vimrc<CR>
 
-set completeopt-=preview
-set relativenumber
-
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
-" set spell spelllang=en_us
-
-set backspace=2
-
-" cmap w!! w !sudo tee > /dev/null %
-
 let g:CommandTFileScanner="find"
 
-set foldcolumn=1
 nnore <Leader>i iO
+
+" hi ErrorMsg term=bold gui=bold
+" highlight Normal ctermbg=none
