@@ -170,7 +170,7 @@ nmap <silent> <Leader>ev ,e /home/simen/.vimrc<CR>
 set completeopt-=preview
 set relativenumber
 
-let g:UltiSnipsExpandTrigger="<c-h>"
+let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 

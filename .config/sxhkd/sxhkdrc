@@ -104,6 +104,10 @@ super + {_,shift + }r
 super + {_,shift + }u
     {hideActiveWindow,unhideLastHiddenWindow}
 
+super + {_,shift + }plus
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
+
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
