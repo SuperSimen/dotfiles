@@ -1,7 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-
 " set the runtime path to include Vundle and initialize
 set rtp+=/home/simen/.vim/bundle/Vundle.vim
 " alternatively, pass a path where Vundle should install plugins
@@ -10,34 +9,23 @@ call vundle#begin('/home/simen/.vim/bundle')
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'pangloss/vim-javascript'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'pangloss/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mileszs/ack.vim'
-Plugin 'wincent/command-t'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
+" Plugin 'wincent/command-t'
 
-" Plugin 'altercation/vim-colors-solarized'
-Plugin 'whatyouhide/vim-gotham'
-" Plugin 'chriskempson/base16-vim'
-" Plugin 'w0ng/vim-hybrid'
-" Plugin 'tomasr/molokai'
-" Plugin 'flazz/vim-colorschemes'
-" Plugin 'tomasr/molokai'
-" Plugin 'nanotech/jellybeans.vim'
-" Plugin 'Lokaltog/vim-distinguished'
-" Plugin 'tpope/vim-vividchalk'
-
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'tpope/vim-fugitive'
 " Plugin 'majutsushi/tagbar'
 " Plugin 'awk.vim'
 " Plugin 'docunext/closetag.vim'
@@ -53,6 +41,16 @@ Plugin 'whatyouhide/vim-gotham'
 " Plugin 'vim-scripts/ShowMarks'
 " Plugin 'vim-scripts/taglist.vim'
 
+Plugin 'whatyouhide/vim-gotham'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'w0ng/vim-hybrid'
+" Plugin 'tomasr/molokai'
+" Plugin 'flazz/vim-colorschemes'
+" Plugin 'tomasr/molokai'
+" Plugin 'nanotech/jellybeans.vim'
+" Plugin 'Lokaltog/vim-distinguished'
+" Plugin 'tpope/vim-vividchalk'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,9 +67,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-colorscheme gotham
+runtime macros/matchit.vim
 
-let mapleader = "\<Space>"
+colorscheme gotham
 
 syntax on
 
@@ -101,42 +99,42 @@ set noantialias
 set completeopt-=preview
 set relativenumber
 set foldcolumn=1
-
+set wildmenu
 set directory=/home/simen/.vim/temp"
 set backupdir=/home/simen/.vim/backup"
-set backup
 set undodir=/home/simen/.vim/undo"
+set backup
 set undofile
 
-nnore <silent> <Leader>h :bp<CR>
-nnore <silent> <Leader>l :bn<CR>
-nnore <silent> <Leader>k :tabn<CR>
-nnore <silent> <Leader>j :tabp<CR>
+let mapleader = "\<Space>"
+
+nore , :
+nore : ,
 
 nnore <c-j> <c-w>j
 nnore <c-k> <c-w>k
 nnore <c-h> <c-w>h
 nnore <c-l> <c-w>l
-
-nnore , :
-nnore <silent> : ,
-vnore , :
-vnore <silent> : ,
-
-"inore <silent> <Down> <C-o>gj
-"inore <silent> <Up> <C-o>gk
-nnore <silent> <Down> gj
-nnore <silent> <Up> gk
-
-runtime macros/matchit.vim
-
-nnore <silent> <C-n> :NERDTreeToggle<CR>
-
-nnore <silent> <C-e> 3<C-e>
-nnore <silent> <C-y> 3<C-y>
-
-" setlocal spell spelllang=en 
-
+nnore <C-e> 3<C-e>
+nnore <C-y> 3<C-y>
+nnore <Down> gj
+nnore <Up> gk
+nnore <BS> gg
+nnore <Leader>k :bp<CR>
+nnore <Leader>j :bn<CR>
+nnore <Leader>l :tabn<CR>
+nnore <Leader>h :tabp<CR>
+nnore <Leader>n :tabe<CR>
+nnore <Leader>td :TernDef<CR>
+nnore <Leader>ev :e /home/simen/.vimrc<CR>
+nnore <Leader>db :bp<bar>bd #<CR>
+nnore <Leader>i iO
+" nnore <Leader>a H :vertical resize 30<CR>
+" nnore <Leader>ø L :vertical resize 30<CR>
+" nnore <Leader>f :vertical topleft Vexplore <bar> vertical resize 30<CR>
+"
+let g:netrw_list_hide= '^\..*'
+let g:netrw_liststyle=3
 " let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
@@ -153,16 +151,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" vnore <silent> y y`]
-" vnore <silent> p p`]
-" nnore <silent> p p`]
-
-nnore <silent> <Leader>td :TernDef<CR>
-
-nnore <silent> <CR> G
-nnore <silent> <BS> gg
-
-nmap <silent> <Leader>ev ,e /home/simen/.vimrc<CR>
+" vnore y y`]
+" vnore p p`]
+" nnore p p`]
 
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
@@ -170,7 +161,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 let g:CommandTFileScanner="find"
 
-nnore <Leader>i iO
-
-" hi ErrorMsg term=bold gui=bold
-" highlight Normal ctermbg=none
+let &path=getcwd() . "/**"
