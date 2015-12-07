@@ -5,7 +5,7 @@ function isUSBKeyboardConnected {
 }
 
 function applyUSBKeyboardConfig {
-	setxkbmap -layout no_modified -variant mac -option lv3:lwin_switch,altwin:swap_alt_win
+	setxkbmap -layout no_modified -variant mac -option lv3:lwin_switch,altwin:swap_alt_win,caps:ctrl_modifier
 }
 
 function applyOnboardKeyboardConfig {

@@ -49,6 +49,12 @@ super + {comma,period}
 super + {Left,Right}
 	bspc desktop -f {prev,next}
 
+super + {Up,Down}
+	bspc monitor -f {up,down}
+
+super + shift + {Left,Down,Up,Right}
+	bspc window -m {left,down,up,right}
+
 super + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
 

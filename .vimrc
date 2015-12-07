@@ -23,6 +23,12 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
 " Plugin 'wincent/command-t'
+" Plugin 'vim-scripts/taglist.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+" Plugin 'StanAngeloff/php.vim'
+" Plugin 'shawncplus/phpcomplete.vim'
 
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'tpope/vim-fugitive'
@@ -39,7 +45,6 @@ Plugin 'rstacruz/sparkup'
 " Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'ervandew/supertab'
 " Plugin 'vim-scripts/ShowMarks'
-" Plugin 'vim-scripts/taglist.vim'
 
 Plugin 'whatyouhide/vim-gotham'
 " Plugin 'altercation/vim-colors-solarized'
@@ -78,13 +83,13 @@ set nrformats=
 set incsearch
 set hidden
 set ignorecase
+set smartcase
 set expandtab
 set softtabstop=4
 set shiftwidth=4
 set ruler
 set number
 set showcmd
-set smartcase
 set wrap
 set mouse=a
 set ttymouse=urxvt
@@ -97,7 +102,7 @@ set backspace=2
 set guifont=Menlo\ Regular:h13
 set noantialias
 set completeopt-=preview
-set relativenumber
+" set relativenumber
 set foldcolumn=1
 set wildmenu
 set directory=/home/simen/.vim/temp"
@@ -119,13 +124,14 @@ nnore <C-e> 3<C-e>
 nnore <C-y> 3<C-y>
 nnore <Down> gj
 nnore <Up> gk
-nnore <BS> gg
+"nnore <BS> gg
 nnore <Leader>k :bp<CR>
 nnore <Leader>j :bn<CR>
 nnore <Leader>l :tabn<CR>
 nnore <Leader>h :tabp<CR>
 nnore <Leader>n :tabe<CR>
 nnore <Leader>td :TernDef<CR>
+nnore <Leader>tb :Tagbar<CR>
 nnore <Leader>ev :e /home/simen/.vimrc<CR>
 nnore <Leader>db :bp<bar>bd #<CR>
 nnore <Leader>i iO
@@ -135,10 +141,18 @@ nnore <Leader>i iO
 "
 let g:netrw_list_hide= '^\..*'
 let g:netrw_liststyle=3
+
+
 " let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-let g:syntastic_check_on_wq = 0
 "let g:syntastic_mode_map={ 'mode': 'active','active_filetypes': [],'passive_filetypes': ['html'] }
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+" let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+
+let g:easytags_async = 1
+let g:easytags_auto_highlight = 0
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
@@ -162,3 +176,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:CommandTFileScanner="find"
 
 let &path=getcwd() . "/**"
+
+
+
