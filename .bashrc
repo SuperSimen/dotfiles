@@ -8,6 +8,6 @@
 # alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-alias osxHome="cd /mnt/osx/Users/simen"
+# alias osxHome="cd /mnt/osx/Users/simen"
 
 stty -ixon

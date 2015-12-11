@@ -24,9 +24,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
 " Plugin 'wincent/command-t'
 " Plugin 'vim-scripts/taglist.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
+" Plugin 'majutsushi/tagbar'
+" Plugin 'xolox/vim-easytags'
+" Plugin 'xolox/vim-misc'
 " Plugin 'StanAngeloff/php.vim'
 " Plugin 'shawncplus/phpcomplete.vim'
 
@@ -103,7 +103,7 @@ set guifont=Menlo\ Regular:h13
 set noantialias
 set completeopt-=preview
 " set relativenumber
-set foldcolumn=1
+" set foldcolumn=1
 set wildmenu
 set directory=/home/simen/.vim/temp"
 set backupdir=/home/simen/.vim/backup"

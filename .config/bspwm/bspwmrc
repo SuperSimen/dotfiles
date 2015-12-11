@@ -8,7 +8,9 @@ bspc config window_gap         2
 bspc config gapless_monocle     true
 bspc config focus_by_distance   true
 
-bspc config auto_cancel true
+#bspc config auto_cancel true
 
-bspc monitor DP-1 -d I II III IV V
-bspc monitor LVDS-1 -d VI VII VIII IX
+bspc monitor DP1 -d I II III
+bspc monitor DP2 -d I II III
+bspc monitor eDP1 -d I II III
+

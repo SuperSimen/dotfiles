@@ -1,16 +1,17 @@
 xsetroot -cursor_name left_ptr
 
-sudo systemctl start pommed
+# sudo systemctl start pommed
 
 daze
 applyUSBKeyboardConfigIfConnected
 
 xrdb ~/.xresources
-synclient PalmDetect=1
+# synclient PalmDetect=1
 
-sudo mount /dev/sda2 /mnt/osx
+# sudo mount /dev/sda2 /mnt/osx
 
 feh --randomize --bg-fill ~/Dropbox/wallpaper/
+numlockx on
 
 sxhkd -f 50 &
 conky &

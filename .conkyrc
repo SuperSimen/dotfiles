@@ -5,7 +5,7 @@ double_buffer yes
 no_buffers yes
 
 # Window specifications #
-gap_x 0
+gap_x -1280
 gap_y 0
 alignment middle_middle
 minimum_size 600 360
@@ -39,6 +39,5 @@ TEXT
 \
 ${font Raleway:weight=Light :size=100}${alignc}${time %H}${alignc}:${alignc}${time %M}
 ${font Raleway:weight=Light:size=32}${voffset -60}${alignc}${time %A %B %d}
-${font Raleway:weight=Light :size=50}${voffset 20}${alignc}${exec acpi | awk -F, '{print $2}'}
 \
 \

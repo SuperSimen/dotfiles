@@ -1,11 +1,11 @@
 #! /bin/bash
 
 function isUSBKeyboardConnected {
-	xinput | grep -ci "usb keyboard"
+	xinput | grep -ci "usb keyboard\|quickfire"
 }
 
 function applyUSBKeyboardConfig {
-	setxkbmap -layout no_modified -variant mac -option lv3:lwin_switch,altwin:swap_alt_win,caps:ctrl_modifier
+	setxkbmap -layout no_modified -variant mac -option lv3:lwin_switch,altwin:swap_lalt_lwin,caps:ctrl_modifier
 }
 
 function applyOnboardKeyboardConfig {
