@@ -11,7 +11,8 @@ xrdb ~/.xresources
 # sudo mount /dev/sda2 /mnt/osx
 
 feh --randomize --bg-fill ~/Dropbox/wallpaper/
-numlockx on
+#feh --bg-fill ~/Dropbox/wallpaper/$(ls ~/Dropbox/wallpaper/| sort -R | tail -n 1)
+#numlockx on
 
 sxhkd -f 50 &
 conky &
