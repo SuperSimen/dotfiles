@@ -13,4 +13,3 @@ bspc config focus_by_distance   true
 bspc monitor DP1 -d I II III
 bspc monitor DP2 -d I II III
 bspc monitor eDP1 -d I II III
-
