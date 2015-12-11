@@ -46,11 +46,11 @@ super + {_,shift + }c
 super + {comma,period}
 	bspc desktop -C {backward,forward}
 
-super + {Left,Right}
+super + {Up,Down}
 	bspc desktop -f {prev,next}
 
-super + {Up,Down}
-	bspc monitor -f {up,down}
+super + {Left,Right}
+	bspc monitor -f {prev,next}
 
 super + shift + {Left,Down,Up,Right}
 	bspc window -m {left,down,up,right}
@@ -94,9 +94,6 @@ super + Return
 
 super + space
 	dmenu_run
-
-alt + space
-	lighthouse | sh
 
 ctrl + space ; {v,f,s,e,n,c,x}
 	{urxvt -e vim, firefox, spotify, evince, nautilus, chromium, urxvt -e vim ~/.config/sxhkd/sxhkdrc}
