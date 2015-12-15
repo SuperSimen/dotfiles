@@ -86,8 +86,10 @@ set incsearch
 set hidden
 set ignorecase
 set smartcase
-set expandtab
-set softtabstop=4
+set noexpandtab
+"set expandtab
+"set softtabstop=4
+set tabstop=4
 set shiftwidth=4
 set ruler
 set number
