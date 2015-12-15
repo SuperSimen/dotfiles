@@ -1,5 +1,4 @@
 URxvt.scrollBar: false
-Xcursor.size: 22
 
 *.foreground:   #98d1ce
 *.background:   #0a0f14

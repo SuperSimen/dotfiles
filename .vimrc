@@ -46,7 +46,8 @@ Plugin 'rstacruz/sparkup'
 " Plugin 'ervandew/supertab'
 " Plugin 'vim-scripts/ShowMarks'
 
-Plugin 'whatyouhide/vim-gotham'
+" Plugin 'whatyouhide/vim-gotham'
+Plugin 'chriskempson/base16-vim'
 " Plugin 'altercation/vim-colors-solarized'
 " Plugin 'chriskempson/base16-vim'
 " Plugin 'w0ng/vim-hybrid'
@@ -74,7 +75,8 @@ filetype plugin indent on    " required
 
 runtime macros/matchit.vim
 
-colorscheme gotham
+colorscheme base16-atelierlakeside
+set background=dark
 
 syntax on
 
@@ -97,9 +99,8 @@ set timeoutlen=1000
 set ttimeoutlen=10
 set history=1000
 set tabpagemax=50
-set background=dark
 set backspace=2
-set guifont=Menlo\ Regular:h13
+"set guifont=Menlo\ Regular:h14
 set noantialias
 set completeopt-=preview
 " set relativenumber

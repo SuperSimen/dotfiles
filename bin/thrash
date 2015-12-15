@@ -1,4 +1,4 @@
 #! /bin/bash
 
 mkdir -p ~/.trash
-mv --backup=numbered -t ~/.trash $@
+mv --backup=numbered -t ~/.trash "$@"

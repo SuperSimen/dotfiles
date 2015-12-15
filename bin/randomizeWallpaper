@@ -1,0 +1,3 @@
+#! /bin/bash
+
+feh --bg-fill ~/Dropbox/wallpaper/$(ls ~/Dropbox/wallpaper/| sort -R | tail -n 1) --bg-fill ~/Dropbox/wallpaper/$(ls ~/Dropbox/wallpaper/| sort -R | tail -n 1)

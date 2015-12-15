@@ -5,13 +5,12 @@ xsetroot -cursor_name left_ptr
 daze
 applyUSBKeyboardConfigIfConnected
 
-xrdb ~/.xresources
+xrdb ~/.xresources/base16-ashes.dark
 # synclient PalmDetect=1
 
 # sudo mount /dev/sda2 /mnt/osx
 
-feh --randomize --bg-fill ~/Dropbox/wallpaper/
-#feh --bg-fill ~/Dropbox/wallpaper/$(ls ~/Dropbox/wallpaper/| sort -R | tail -n 1)
+randomizeWallpaper
 #numlockx on
 
 sxhkd -f 50 &
