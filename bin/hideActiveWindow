@@ -3,5 +3,8 @@
 # lastWindow=$(bspc query -H | /home/simen/src/haskell/getLastWordOnLastLineFromInput.hs)
 
 lastWindow=$(xdotool getactivewindow)
-echo $lastWindow >> ~/.hidden-windows
-xdotool windowunmap $lastWindow
+if [ -n "$lastWindow" ]
+then
+	echo "$lastWindow" >> ~/.hidden-windows
+	xdotool windowunmap "$lastWindow"
+fi
