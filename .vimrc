@@ -117,7 +117,7 @@ set undofile
 let mapleader = "\<Space>"
 
 nore , :
-nore : ,
+" nore : ,
 
 nnore <c-j> <c-w>j
 nnore <c-k> <c-w>k
