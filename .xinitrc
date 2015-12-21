@@ -11,7 +11,7 @@ xrdb ~/.xresources/base16-ashes.dark
 # sudo mount /dev/sda2 /mnt/osx
 
 randomizeWallpaper
-#numlockx on
+numlockx on
 
 sxhkd -f 50 &
 conky &
