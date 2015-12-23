@@ -10,6 +10,8 @@ xrdb ~/.xresources/base16-ashes.dark
 
 # sudo mount /dev/sda2 /mnt/osx
 
+sudo sysctl -p
+
 randomizeWallpaper
 numlockx on
 

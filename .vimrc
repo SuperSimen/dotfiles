@@ -22,6 +22,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
+Plugin 'tpope/vim-vinegar.git'
 " Plugin 'wincent/command-t'
 " Plugin 'vim-scripts/taglist.vim'
 " Plugin 'majutsushi/tagbar'
@@ -143,7 +144,7 @@ nnore <Leader>i iO
 " nnore <Leader>f :vertical topleft Vexplore <bar> vertical resize 30<CR>
 "
 let g:netrw_list_hide= '^\..*'
-let g:netrw_liststyle=3
+let g:netrw_liststyle=0
 
 
 " let g:syntastic_check_on_open=1
@@ -154,8 +155,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
 " let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 
-let g:easytags_async = 1
-let g:easytags_auto_highlight = 0
+" let g:easytags_async = 1
+" let g:easytags_auto_highlight = 0
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
