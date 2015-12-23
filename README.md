@@ -1,4 +1,6 @@
-Arch Linux with bspwm
+# Configuration files
 
-![Desktop](/.screenshots/desktop.png)
-![Busy](/.screenshots/busy.png)
+bspwm
+vim
+xinit
+conky
