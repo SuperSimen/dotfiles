@@ -76,7 +76,7 @@ filetype plugin indent on    " required
 
 runtime macros/matchit.vim
 
-colorscheme base16-atelierlakeside
+colorscheme base16-ashes
 set background=dark
 
 syntax on
@@ -179,7 +179,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 let g:CommandTFileScanner="find"
 
-let &path=getcwd() . "/**"
+"let &path=getcwd() . "/**"
+let &path="/home/simen/Dropbox/documents/**," . getcwd() . "/**"
 
 
 
