@@ -10,6 +10,4 @@ bspc config focus_by_distance   true
 
 #bspc config auto_cancel true
 
-bspc monitor DP1 -d I II III
-bspc monitor DP2 -d I II III
-bspc monitor eDP1 -d I II III
+bspc monitor DP-1 -d I II III IV V VI

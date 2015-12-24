@@ -22,7 +22,9 @@ Plugin 'mileszs/ack.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
-Plugin 'tpope/vim-vinegar.git'
+Plugin 'Shougo/vimfiler.vim'
+Plugin 'Shougo/unite.vim'
+"Plugin 'tpope/vim-vinegar.git'
 " Plugin 'wincent/command-t'
 " Plugin 'vim-scripts/taglist.vim'
 " Plugin 'majutsushi/tagbar'
@@ -137,15 +139,17 @@ nnore <Leader>n :tabe<CR>
 nnore <Leader>td :TernDef<CR>
 nnore <Leader>tb :Tagbar<CR>
 nnore <Leader>ev :e /home/simen/.vimrc<CR>
-nnore <Leader>db :bp<bar>bd #<CR>
+nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 " nnore <Leader>a H :vertical resize 30<CR>
 " nnore <Leader>ø L :vertical resize 30<CR>
 " nnore <Leader>f :vertical topleft Vexplore <bar> vertical resize 30<CR>
 "
-let g:netrw_list_hide= '^\..*'
-let g:netrw_liststyle=0
-
+"let g:netrw_list_hide= '^\..*'
+"let g:netrw_liststyle=0
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_no_default_key_mappings = 1
+nmap <CR> <Plug>(vimfiler_cd_or_edit)
 
 " let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
