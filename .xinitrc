@@ -8,14 +8,13 @@ applyUSBKeyboardConfigIfConnected
 xrdb ~/.xresources/base16-ashes.dark
 # synclient PalmDetect=1
 
-# sudo mount /dev/sda2 /mnt/osx
 
 sudo sysctl -p
 
+setHDSpindown 36 &
 randomizeWallpaper
 numlockx on
 
 sxhkd -f 50 &
-conky &
 dropbox &
 exec bspwm

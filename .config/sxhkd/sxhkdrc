@@ -105,7 +105,7 @@ super + space
 	dmenu_run
 
 ctrl + space ; {v,f,s,p,n,c,x,l,e}
-	{urxvt -e vim, firefox, spotify, evince, nautilus, chromium, urxvt -e vim ~/.config/sxhkd/sxhkdrc,chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action}
+	{urxvt -e vim, firefox, spotify, evince, sudo nautilus, chromium, urxvt -e vim ~/.config/sxhkd/sxhkdrc,chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action}
 
 super + {_,shift + }minus
 	bspwm_cycleWindowsOfSameClass {next,prev}

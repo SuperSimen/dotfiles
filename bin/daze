@@ -31,3 +31,5 @@ function enableDP {
 }
 
 enableDP DP1Connected DP2Connected
+
+xrandr --output HDMI-0 --off

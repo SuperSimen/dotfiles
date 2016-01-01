@@ -111,6 +111,9 @@ set completeopt-=preview
 " set relativenumber
 " set foldcolumn=1
 set wildmenu
+cnoremap <Left> <Space><BS><Left>
+cnoremap <Right> <Space><BS><Right>
+
 set directory=/home/simen/.vim/temp"
 set backupdir=/home/simen/.vim/backup"
 set undodir=/home/simen/.vim/undo"
