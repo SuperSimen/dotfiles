@@ -1,4 +1,5 @@
 URxvt.scrollBar: false
+URxvt.font: -*-proggycleancp-*-*-*-*-*-*-*-*-*-*-*-*
 
 ! Base16 Ashes
 ! Scheme: Jannik Siebert (https://github.com/janniks)
