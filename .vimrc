@@ -24,7 +24,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'Shougo/unite.vim'
-"Plugin 'tpope/vim-vinegar.git'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'neovimhaskell/haskell-vim'
+" Plugin 'itchyny/vim-haskell-indent'
+
+" Plugin 'tpope/vim-vinegar.git'
 " Plugin 'wincent/command-t'
 " Plugin 'vim-scripts/taglist.vim'
 " Plugin 'majutsushi/tagbar'
@@ -89,11 +94,13 @@ set incsearch
 set hidden
 set ignorecase
 set smartcase
-set noexpandtab
-"set expandtab
-"set softtabstop=4
-set tabstop=4
+
+
 set shiftwidth=4
+set expandtab
+" set softtabstop=4
+" set noexpandtab
+set tabstop=4
 set ruler
 set number
 set showcmd

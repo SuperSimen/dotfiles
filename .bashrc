@@ -12,6 +12,7 @@ shopt -s histappend
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 
+
 complete -cf sudo
 
 stty -ixon
