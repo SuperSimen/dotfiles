@@ -32,14 +32,14 @@ Plugin 'neovimhaskell/haskell-vim'
 " Plugin 'tpope/vim-vinegar.git'
 " Plugin 'wincent/command-t'
 " Plugin 'vim-scripts/taglist.vim'
-" Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 " Plugin 'xolox/vim-easytags'
 " Plugin 'xolox/vim-misc'
 " Plugin 'StanAngeloff/php.vim'
 " Plugin 'shawncplus/phpcomplete.vim'
 
 " Plugin 'scrooloose/nerdtree'
-" Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " Plugin 'majutsushi/tagbar'
 " Plugin 'awk.vim'
 " Plugin 'docunext/closetag.vim'
@@ -149,6 +149,8 @@ nnore <Leader>n :tabe<CR>
 nnore <Leader>td :TernDef<CR>
 nnore <Leader>tb :Tagbar<CR>
 nnore <Leader>ev :e /home/simen/.vimrc<CR>
+nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
+nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 " nnore <Leader>a H :vertical resize 30<CR>

@@ -104,8 +104,13 @@ super + shift + Return
 super + space
 	dmenu_run
 
-ctrl + space ; {v,f,s,p,n,c,x,l,e}
-	{urxvt -e vim, firefox, spotify, evince, nautilus, chromium, urxvt -e vim ~/.config/sxhkd/sxhkdrc,chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action}
+#Program shortcuts
+ctrl + space ; {f,s,e,n,c}
+	{firefox, spotify, evince, nautilus, chromium}
+
+# Chrome-apps
+ctrl + space ; a ; {s,e,p,j}
+	{chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action, chromium --app=http://overapi.com/php/, chromium --app=http://overapi.com/javascript/}
 
 super + {_,shift + }minus
 	bspwm_cycleWindowsOfSameClass {next,prev}
