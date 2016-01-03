@@ -1,5 +1,0 @@
-#! /bin/bash
-
-perl -pe 's/\r\n/\n/g' "$1" | tail -n+2 | sed -E \
--e 's/\t$/\t\\N/g' \
--e 's/\t\t/\t\\N\t/g'

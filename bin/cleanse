@@ -1,3 +1,0 @@
-#! /bin/bash
-
-rm -rf `ls -a ~/.trash | tail -c +6 | awk -v path=~ '$0=path "/.trash/" $0' | xargs`
