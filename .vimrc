@@ -163,9 +163,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 let &path="/home/simen/Dropbox/documents/**," . getcwd() . "/**"
 
-function OpenMirrorFile()
-    let path = "/home/simen/dotfiles/" .  expand('%:.')
-    execute "vsp " . path
-endfunction
+if exists("*OpenMirrorFile") == 0
+    function OpenMirrorFile()
+        let path = "/home/simen/dotfiles/" .  expand('%:.')
+        execute "vsp " . path
+    endfunction
+endif
 
 
