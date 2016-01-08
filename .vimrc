@@ -87,6 +87,7 @@ set backup
 set undofile
 set splitright
 set wildmenu
+set wildignorecase
 cnoremap <Left> <Space><BS><Left>
 cnoremap <Right> <Space><BS><Right>
 
@@ -161,7 +162,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 
-let &path="/home/simen/Dropbox/documents/**," . getcwd() . "/**"
+let &path="/home/simen/Dropbox/documents/*," . getcwd() . ",style,js,static,classes,database/**,views/**"
 
 if exists("*OpenMirrorFile") == 0
     function OpenMirrorFile()
