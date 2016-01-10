@@ -23,7 +23,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
-Plugin 'Shougo/vimfiler.vim'
+Plugin 'SuperSimen/vimfiler.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'Shougo/vimproc.vim'
@@ -127,8 +127,9 @@ nnore <Leader>i iO
 "
 
 let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_no_default_key_mappings = 1
-nmap <CR> <Plug>(vimfiler_cd_or_edit)
+" let g:vimfiler_no_default_key_mappings = 1
+let g:vimfiler_custom_key_mappings = 1
+" nmap <CR> <Plug>(vimfiler_cd_or_edit)
 
 
 "
@@ -164,11 +165,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 let &path="/home/simen/Dropbox/documents/*," . getcwd() . ",style,js,static,classes,database/**,views/**"
 
-if exists("*OpenMirrorFile") == 0
-    function OpenMirrorFile()
-        let path = "/home/simen/dotfiles/" .  expand('%:.')
-        execute "vsp " . path
-    endfunction
-endif
+function! OpenMirrorFile()
+    execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
+endfunction
 
 
