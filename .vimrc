@@ -163,10 +163,9 @@ let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 
-let &path="/home/simen/Dropbox/documents/*," . getcwd() . ",style,js,static,classes,database/**,views/**"
+"let &path="/home/simen/Dropbox/documents/*," . getcwd() . ",style,js,static,classes,database/**,views/**"
 
 function! OpenMirrorFile()
     execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
 endfunction
-
 
