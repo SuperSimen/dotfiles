@@ -33,6 +33,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'SuperSimen/vim-pathfinder'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -66,8 +67,8 @@ set ignorecase
 set smartcase
 set shiftwidth=4
 set tabstop=4
-set expandtab
-" set noexpandtab
+" set expandtab
+set noexpandtab
 set ruler
 set number
 set showcmd
@@ -163,9 +164,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 
-"let &path="/home/simen/Dropbox/documents/*," . getcwd() . ",style,js,static,classes,database/**,views/**"
-
 function! OpenMirrorFile()
     execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
 endfunction
 
+set suffixesadd+=.php,.js
