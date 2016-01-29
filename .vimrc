@@ -10,7 +10,7 @@ call vundle#begin('/home/simen/.vim/bundle')
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'tpope/vim-surround'
@@ -24,6 +24,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
 Plugin 'SuperSimen/vimfiler.vim'
+Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'Shougo/unite.vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'Shougo/vimproc.vim'
@@ -33,7 +34,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'SuperSimen/vim-pathfinder'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -100,6 +100,7 @@ cnoremap <Right> <Space><BS><Right>
 let mapleader = "\<Space>"
 
 nore , :
+nore : ,
 nnore <c-j> <c-w>j
 nnore <c-k> <c-w>k
 nnore <c-h> <c-w>h
@@ -122,6 +123,8 @@ nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 
+nnore <Leader>dd OLog::debug();hi
+nnore <Leader>dw OLog::warning();hi
 
 "
 " Vimfiler
