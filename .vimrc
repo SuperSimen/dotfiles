@@ -10,7 +10,7 @@ call vundle#begin('/home/simen/.vim/bundle')
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'tpope/vim-surround'
@@ -20,7 +20,8 @@ Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mileszs/ack.vim'
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'xolox/vim-colorscheme-switcher'
+" Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
 Plugin 'SuperSimen/vimfiler.vim'
@@ -39,7 +40,9 @@ Plugin 'SuperSimen/vim-pathfinder'
 " Plugin 'kien/ctrlp.vim'
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'xolox/vim-easytags'
-" Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-misc'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
 " Plugin 'awk.vim'
 " Plugin 'vim-scripts/ShowMarks'
 
@@ -57,7 +60,7 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 syntax on
-colorscheme base16-ashes
+colorscheme base16-grayscale
 set background=dark
 set autoread
 set nrformats=
@@ -65,8 +68,8 @@ set incsearch
 set hidden
 set ignorecase
 set smartcase
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 " set expandtab
 set noexpandtab
 set ruler

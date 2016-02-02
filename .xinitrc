@@ -5,7 +5,7 @@ xsetroot -cursor_name left_ptr
 daze
 applyUSBKeyboardConfigIfConnected
 
-xrdb ~/.xresources/base16-ashes.dark
+xrdb ~/.xresources/hybrid-reduced-contrast
 # synclient PalmDetect=1
 
 
