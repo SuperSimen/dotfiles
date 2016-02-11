@@ -23,17 +23,18 @@ Plugin 'xolox/vim-colorscheme-switcher'
 " Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
-Plugin 'SuperSimen/vimfiler.vim'
-Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'Shougo/unite.vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'neovimhaskell/haskell-vim'
-Plugin 'evidens/vim-twig'
 Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
+
+Plugin 'SuperSimen/vimfiler.vim'
+Plugin 'SuperSimen/vim-pathfinder'
+Plugin 'SuperSimen/vim-twig'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -59,7 +60,7 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 syntax on
-colorscheme base16-grayscale
+colorscheme base16-harmonic16
 set background=dark
 set autoread
 set nrformats=
