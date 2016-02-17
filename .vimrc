@@ -112,8 +112,8 @@ nnore <C-e> 3<C-e>
 nnore <C-y> 3<C-y>
 nnore <Down> gj
 nnore <Up> gk
-nnore <Leader>k :bp<CR>
-nnore <Leader>j :bn<CR>
+nnore <Leader>j :bp<CR>
+nnore <Leader>k :bn<CR>
 nnore <Leader>l :tabn<CR>
 nnore <Leader>h :tabp<CR>
 nnore <Leader>n :tabe<CR>
