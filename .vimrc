@@ -20,7 +20,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mileszs/ack.vim'
 Plugin 'xolox/vim-colorscheme-switcher'
-" Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
 Plugin 'Shougo/unite.vim'
@@ -32,6 +31,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'xolox/vim-misc'
 Plugin 'SuperSimen/vimfiler.vim'
 Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
@@ -40,9 +40,8 @@ Plugin 'SuperSimen/vim-twig'
 " Plugin 'kien/ctrlp.vim'
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'flazz/vim-colorschemes'
 " Plugin 'awk.vim'
 " Plugin 'vim-scripts/ShowMarks'
 
@@ -68,10 +67,10 @@ set incsearch
 set hidden
 set ignorecase
 set smartcase
-set shiftwidth=2
-set tabstop=2
-" set expandtab
-set noexpandtab
+set shiftwidth=4
+set tabstop=4
+set expandtab
+"set noexpandtab
 set ruler
 set number
 set showcmd
@@ -126,8 +125,8 @@ nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 
-nnore <Leader>dd OLog::debug();hi
-nnore <Leader>dw OLog::warning();hi
+nnore <Leader>dd oLog::debug();hi
+nnore <Leader>dw oLog::warning();hi
 
 "
 " Vimfiler
