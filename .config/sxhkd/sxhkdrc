@@ -1,6 +1,7 @@
 #
 # bspwm hotkeys
 #
+#
 
 super + alt + Escape
 	bspc quit
