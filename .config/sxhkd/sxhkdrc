@@ -112,6 +112,12 @@ ctrl + space ; {f,s,e,n,c}
 ctrl + space ; a ; {s,e,p,j}
 	{chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action, chromium --app=http://overapi.com/php/, chromium --app=http://overapi.com/javascript/}
 
+ctrl + space ; u ; {t,m}
+	{urxvt -cd ~/src/test.no/, urxvt -cd ~/src/mobiltelefoni.no}
+
+ctrl + space ; u ; {2,3,4}
+	{urxvt -e ssh osl2.net, urxvt -e ssh osl3.net, urxvt -e ssh osl4.net}
+
 super + {_,shift + }minus
 	bspwm_cycleWindowsOfSameClass {next,prev}
 
