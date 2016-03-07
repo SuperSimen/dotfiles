@@ -35,6 +35,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'SuperSimen/vimfiler.vim'
 Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
+Plugin 'SuperSimen/vim-run'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -116,14 +117,13 @@ nnore <Leader>k :bn<CR>
 nnore <Leader>l :tabn<CR>
 nnore <Leader>h :tabp<CR>
 nnore <Leader>n :tabe<CR>
-nnore <Leader>td :TernDef<CR>
-nnore <Leader>tb :Tagbar<CR>
 nnore <Leader>ev :e /home/simen/.vimrc<CR>
 nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
+nnore <Leader>r :RunCode<CR>
 
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
