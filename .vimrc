@@ -11,7 +11,7 @@ call vundle#begin('/home/simen/.vim/bundle')
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'pangloss/vim-javascript'
-Plugin 'marijnh/tern_for_vim'
+"Plugin 'marijnh/tern_for_vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'michaeljsmith/vim-indent-object'
@@ -173,4 +173,4 @@ function! OpenMirrorFile()
     execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
 endfunction
 
-set suffixesadd+=.php,.js
+set suffixesadd=.php,.js,.twig
