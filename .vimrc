@@ -30,6 +30,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
 
 Plugin 'xolox/vim-misc'
 Plugin 'SuperSimen/vimfiler.vim'
@@ -175,4 +176,4 @@ endfunction
 
 set suffixesadd+=.php,.js
 
-let g:pathfinder_include='/Users/simen/Dropbox/Documents,/Users/simen/.vim/bundle/vim-pathfinder/**,/Users/simen/.vim/bundle/vim-run/**'
+let g:pathfinder_include='/home/simen/Dropbox/Documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**'
