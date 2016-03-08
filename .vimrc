@@ -70,6 +70,7 @@ set ignorecase
 set smartcase
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
 set expandtab
 "set noexpandtab
 set ruler
@@ -124,6 +125,7 @@ nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 nnore <Leader>r :RunCode<CR>
+nnore <Leader>f :find 
 
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
@@ -133,9 +135,7 @@ nnore <Leader>dw oLog::warning();hi
 "
 
 let g:vimfiler_as_default_explorer = 1
-" let g:vimfiler_no_default_key_mappings = 1
 let g:vimfiler_custom_key_mappings = 1
-" nmap <CR> <Plug>(vimfiler_cd_or_edit)
 
 
 "
@@ -174,3 +174,5 @@ function! OpenMirrorFile()
 endfunction
 
 set suffixesadd+=.php,.js
+
+let g:pathfinder_include='/Users/simen/Dropbox/Documents,/Users/simen/.vim/bundle/vim-pathfinder/**,/Users/simen/.vim/bundle/vim-run/**'
