@@ -176,4 +176,4 @@ endfunction
 
 set suffixesadd+=.php,.js
 
-let g:pathfinder_include='/home/simen/Dropbox/Documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**'
+let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**'
