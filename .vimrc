@@ -37,6 +37,7 @@ Plugin 'SuperSimen/vimfiler.vim'
 Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
 Plugin 'SuperSimen/vim-run'
+Plugin 'SuperSimen/vim-cold-turkey'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -130,6 +131,7 @@ nnore <Leader>f :find
 
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
+
 
 "
 " Vimfiler
