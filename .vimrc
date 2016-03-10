@@ -38,6 +38,7 @@ Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
 Plugin 'SuperSimen/vim-run'
 Plugin 'SuperSimen/vim-cold-turkey'
+Plugin 'SuperSimen/vim-terminal'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -98,14 +99,6 @@ set wildignorecase
 cnoremap <Left> <Space><BS><Left>
 cnoremap <Right> <Space><BS><Right>
 
-
-function! RunCommand(command)
-    set shell=/bin/bash\ -i
-    execute ":r ! echo ''; " . a:command
-    set shell=/bin/bash
-endfunction
-com! -complete=shellcmd -nargs=? RunDMC :call RunCommand('<args>')
-
 "
 " Keymaps
 "
@@ -135,7 +128,7 @@ nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
-nnore <Leader>u :RunDMC 
+nnore <Leader>u :Terminal 
 
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
