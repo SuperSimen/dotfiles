@@ -179,7 +179,7 @@ endfunction
 
 set suffixesadd+=.php,.js
 
-let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**,/home/simen/.vim/bundle/vim-cold-turkey/**'
+let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**,/home/simen/.vim/bundle/vim-cold-turkey/**,/home/simen/.vim/bundle/vim-terminal/**'
 
 let g:coldturkey_motions='h,j,k,l,w,b'
 
