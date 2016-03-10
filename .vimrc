@@ -62,7 +62,7 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 syntax on
-colorscheme base16-harmonic16
+colorscheme base16-ashes
 set background=dark
 set autoread
 set nrformats=
@@ -99,6 +99,13 @@ cnoremap <Left> <Space><BS><Left>
 cnoremap <Right> <Space><BS><Right>
 
 
+function! RunCommand(command)
+    set shell=/bin/bash\ -i
+    execute ":r ! echo ''; " . a:command
+    set shell=/bin/bash
+endfunction
+com! -complete=shellcmd -nargs=? RunDMC :call RunCommand('<args>')
+
 "
 " Keymaps
 "
@@ -126,8 +133,9 @@ nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
-nnore <Leader>r :RunCode<CR>
+nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
+nnore <Leader>u :RunDMC 
 
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
@@ -158,7 +166,7 @@ let g:airline_right_sep=''
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set noshowmode
-set statusline+=%#warningmsg#
+set statusline=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
@@ -178,4 +186,8 @@ endfunction
 
 set suffixesadd+=.php,.js
 
-let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**'
+let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**,/home/simen/.vim/bundle/vim-cold-turkey/**'
+
+let g:coldturkey_motions='h,j,k,l,w,b'
+
+
