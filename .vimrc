@@ -38,7 +38,7 @@ Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
 Plugin 'SuperSimen/vim-run'
 Plugin 'SuperSimen/vim-cold-turkey'
-Plugin 'SuperSimen/vim-terminal'
+Plugin 'SuperSimen/vim-shell'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -128,7 +128,7 @@ nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
-nnore <Leader>u :Terminal 
+nnore <Leader>u :Vimshell 
 
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
@@ -179,7 +179,7 @@ endfunction
 
 set suffixesadd+=.php,.js
 
-let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**,/home/simen/.vim/bundle/vim-cold-turkey/**,/home/simen/.vim/bundle/vim-terminal/**'
+let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**,/home/simen/.vim/bundle/vim-cold-turkey/**,/home/simen/.vim/bundle/vim-shell/**'
 
 let g:coldturkey_motions='h,j,k,l,w,b'
 
