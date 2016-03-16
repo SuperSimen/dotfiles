@@ -65,7 +65,7 @@ runtime macros/matchit.vim
 syntax on
 colorscheme base16-ashes
 set background=dark
-set autoread
+"set autoread
 set nrformats=
 set incsearch
 set hidden
@@ -130,6 +130,7 @@ nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
 nnore <Leader>u :Vimshell 
 
+
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
 
@@ -179,8 +180,32 @@ endfunction
 
 set suffixesadd+=.php,.js
 
-let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**,/home/simen/.vim/bundle/vim-cold-turkey/**,/home/simen/.vim/bundle/vim-shell/**'
+let g:pathfinder_include='/home/simen/Dropbox/documents,
+            \/home/simen/.vim/bundle/vim-pathfinder/**,
+            \/home/simen/.vim/bundle/vim-run/**,
+            \/home/simen/.vim/bundle/vim-cold-turkey/**,
+            \/home/simen/.vim/bundle/vim-shell/**,
+            \/home/simen/.vim/bundle/vim-snippets/UltiSnips'
 
 let g:coldturkey_motions='h,j,k,l,w,b'
+let g:coldturkey_max_repeats=15
+let g:coldturkey_time_window=5
+
+
+function! s:ViewSnippet(...)
+    if a:0 == 1
+        call s:OpenSnippetFile(a:1)
+    else
+        call s:OpenSnippetFile(&filetype)
+    endif
+endfunction
+
+function! s:OpenSnippetFile(filetype)
+    execute ":find " . a:filetype . ".snippets"
+endfunction
+
+com! -nargs=0 Snippet :call s:ViewSnippet()
+nnore <Leader>s :Snippet<CR>
+
 
 
