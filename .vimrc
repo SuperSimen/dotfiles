@@ -30,12 +30,14 @@ Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
 
 Plugin 'xolox/vim-misc'
 Plugin 'SuperSimen/vimfiler.vim'
 Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
 Plugin 'SuperSimen/vim-run'
+Plugin 'SuperSimen/vim-cold-turkey'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -70,6 +72,7 @@ set ignorecase
 set smartcase
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
 set expandtab
 "set noexpandtab
 set ruler
@@ -124,18 +127,18 @@ nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 nnore <Leader>r :RunCode<CR>
+nnore <Leader>f :find 
 
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
+
 
 "
 " Vimfiler
 "
 
 let g:vimfiler_as_default_explorer = 1
-" let g:vimfiler_no_default_key_mappings = 1
 let g:vimfiler_custom_key_mappings = 1
-" nmap <CR> <Plug>(vimfiler_cd_or_edit)
 
 
 "
@@ -173,4 +176,6 @@ function! OpenMirrorFile()
     execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
 endfunction
 
-set suffixesadd=.php,.js,.twig
+set suffixesadd+=.php,.js
+
+let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**'
