@@ -40,6 +40,8 @@ Plugin 'SuperSimen/vim-run'
 Plugin 'SuperSimen/vim-cold-turkey'
 Plugin 'SuperSimen/vim-shell'
 
+Plugin 'morhetz/gruvbox'
+
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
 " Plugin 'scrooloose/nerdtree'
@@ -63,9 +65,9 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 syntax on
-colorscheme base16-ashes
+colorscheme gruvbox
 set background=dark
-"set autoread
+set autoread
 set nrformats=
 set incsearch
 set hidden
@@ -126,6 +128,7 @@ nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
+nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
 nnore <Leader>u :Vimshell 
@@ -160,9 +163,6 @@ let g:airline_right_sep=''
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set noshowmode
-set statusline=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 
 "
@@ -188,8 +188,8 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
             \/home/simen/.vim/bundle/vim-snippets/UltiSnips'
 
 let g:coldturkey_motions='h,j,k,l,w,b'
-let g:coldturkey_max_repeats=15
-let g:coldturkey_time_window=5
+let g:coldturkey_max_repeats=100
+let g:coldturkey_time_window=1
 
 
 function! s:ViewSnippet(...)
