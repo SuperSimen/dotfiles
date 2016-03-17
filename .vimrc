@@ -38,6 +38,9 @@ Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
 Plugin 'SuperSimen/vim-run'
 Plugin 'SuperSimen/vim-cold-turkey'
+Plugin 'SuperSimen/vim-shell'
+
+Plugin 'morhetz/gruvbox'
 
 " Plugin 'wincent/command-t'
 " Plugin 'kien/ctrlp.vim'
@@ -62,7 +65,7 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 syntax on
-colorscheme base16-harmonic16
+colorscheme gruvbox
 set background=dark
 set autoread
 set nrformats=
@@ -98,7 +101,6 @@ set wildignorecase
 cnoremap <Left> <Space><BS><Left>
 cnoremap <Right> <Space><BS><Right>
 
-
 "
 " Keymaps
 "
@@ -126,8 +128,11 @@ nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
-nnore <Leader>r :RunCode<CR>
+nnore <Leader>t :Tagbar<cr>
+nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
+nnore <Leader>u :Vimshell 
+
 
 nnore <Leader>dd oLog::debug();hi
 nnore <Leader>dw oLog::warning();hi
@@ -158,9 +163,6 @@ let g:airline_right_sep=''
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set noshowmode
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 
 "
@@ -178,4 +180,32 @@ endfunction
 
 set suffixesadd+=.php,.js
 
-let g:pathfinder_include='/home/simen/Dropbox/documents,/home/simen/.vim/bundle/vim-pathfinder/**,/home/simen/.vim/bundle/vim-run/**'
+let g:pathfinder_include='/home/simen/Dropbox/documents,
+            \/home/simen/.vim/bundle/vim-pathfinder/**,
+            \/home/simen/.vim/bundle/vim-run/**,
+            \/home/simen/.vim/bundle/vim-cold-turkey/**,
+            \/home/simen/.vim/bundle/vim-shell/**,
+            \/home/simen/.vim/bundle/vim-snippets/UltiSnips'
+
+let g:coldturkey_motions='h,j,k,l,w,b'
+let g:coldturkey_max_repeats=100
+let g:coldturkey_time_window=1
+
+
+function! s:ViewSnippet(...)
+    if a:0 == 1
+        call s:OpenSnippetFile(a:1)
+    else
+        call s:OpenSnippetFile(&filetype)
+    endif
+endfunction
+
+function! s:OpenSnippetFile(filetype)
+    execute ":find " . a:filetype . ".snippets"
+endfunction
+
+com! -nargs=0 Snippet :call s:ViewSnippet()
+nnore <Leader>s :Snippet<CR>
+
+
+
