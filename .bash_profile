@@ -9,5 +9,3 @@ alias pu='git push'
 alias re='git pull --rebase'
 
 shopt -s histappend
-
-complete -cf sudo
