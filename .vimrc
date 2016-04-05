@@ -30,6 +30,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
 
 Plugin 'xolox/vim-misc'
