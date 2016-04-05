@@ -12,4 +12,4 @@ complete -cf sudo
 
 stty -ixon
 
-source ~/.bash-commands
+source ~/dotfiles/.bash-commands
