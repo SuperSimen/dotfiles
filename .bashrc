@@ -16,7 +16,10 @@ function vman() {
     then
         echo "$manResult" | vim - -RM
     fi
+}
 
+function v() {
+    vim "$@"
 }
 
 PS1='[\u@\h \W]\$ '
