@@ -133,6 +133,7 @@ nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
 nnore <Leader>u :Vimshell 
+nnore <silent> <Leader>p :.w ! cat<CR>
 
 
 nnore <Leader>dd oLog::debug();hi
@@ -218,3 +219,12 @@ onore iv :<c-u>normal! gv<cr>
 onore av :<c-u>normal! gv<cr>
 
 let g:gruvbox_bold=0
+
+
+function! s:SudoSave()
+    exe ":w ! sudo tee % > /dev/null"
+endfunction
+
+com! -nargs=0 W :call s:SudoSave()
+
+
