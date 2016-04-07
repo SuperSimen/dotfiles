@@ -30,6 +30,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
 
 Plugin 'xolox/vim-misc'
@@ -37,7 +38,7 @@ Plugin 'SuperSimen/vimfiler.vim'
 Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
 Plugin 'SuperSimen/vim-run'
-Plugin 'SuperSimen/vim-cold-turkey'
+" Plugin 'SuperSimen/vim-cold-turkey'
 Plugin 'SuperSimen/vim-shell'
 
 Plugin 'morhetz/gruvbox'
@@ -132,6 +133,7 @@ nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
 nnore <Leader>u :Vimshell 
+nnore <silent> <Leader>p :.w ! cat<CR>
 
 
 nnore <Leader>dd oLog::debug();hi
@@ -163,6 +165,9 @@ let g:airline_right_sep=''
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set noshowmode
+set statusline=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 
 "
@@ -207,5 +212,19 @@ endfunction
 com! -nargs=0 Snippet :call s:ViewSnippet()
 nnore <Leader>s :Snippet<CR>
 
+onore if :<c-u>normal! ggVG<cr>
+onore af :<c-u>normal! ggVG<cr>
+
+onore iv :<c-u>normal! gv<cr>
+onore av :<c-u>normal! gv<cr>
+
+let g:gruvbox_bold=0
+
+
+function! s:SudoSave()
+    exe ":w ! sudo tee % > /dev/null"
+endfunction
+
+com! -nargs=0 W :call s:SudoSave()
 
 
