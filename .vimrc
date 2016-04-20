@@ -32,14 +32,16 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
+Plugin 'othree/html5.vim'
 
 Plugin 'xolox/vim-misc'
 Plugin 'SuperSimen/vimfiler.vim'
 Plugin 'SuperSimen/vim-pathfinder'
 Plugin 'SuperSimen/vim-twig'
 Plugin 'SuperSimen/vim-run'
-" Plugin 'SuperSimen/vim-cold-turkey'
+Plugin 'SuperSimen/vim-cold-turkey'
 Plugin 'SuperSimen/vim-shell'
+Plugin 'SuperSimen/vim-smart-object'
 
 Plugin 'morhetz/gruvbox'
 
@@ -134,6 +136,8 @@ nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
 nnore <Leader>u :Vimshell 
 nnore <silent> <Leader>p :.w ! cat<CR>
+nnore <silent> ]l :lnext<CR>
+nnore <silent> [l :lprevious<CR>
 
 
 nnore <Leader>dd oLog::debug();hi
@@ -154,6 +158,7 @@ let g:vimfiler_custom_key_mappings = 1
 
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
 
 
 "
@@ -190,6 +195,7 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
             \/home/simen/.vim/bundle/vim-run/**,
             \/home/simen/.vim/bundle/vim-cold-turkey/**,
             \/home/simen/.vim/bundle/vim-shell/**,
+            \/home/simen/.vim/bundle/vim-smart-object/**,
             \/home/simen/.vim/bundle/vim-snippets/UltiSnips'
 
 let g:coldturkey_motions='h,j,k,l,w,b'
