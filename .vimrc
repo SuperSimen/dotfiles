@@ -35,13 +35,14 @@ Plugin 'ervandew/supertab'
 Plugin 'othree/html5.vim'
 
 Plugin 'xolox/vim-misc'
-Plugin 'SuperSimen/vimfiler.vim'
-Plugin 'SuperSimen/vim-pathfinder'
-Plugin 'SuperSimen/vim-twig'
-Plugin 'SuperSimen/vim-run'
-Plugin 'SuperSimen/vim-cold-turkey'
-Plugin 'SuperSimen/vim-shell'
-Plugin 'SuperSimen/vim-smart-object'
+Plugin 'lumiliet/vimfiler.vim'
+Plugin 'lumiliet/vim-pathfinder'
+Plugin 'lumiliet/vim-twig'
+Plugin 'lumiliet/vim-run'
+" Plugin 'lumiliet/vim-cold-turkey'
+Plugin 'lumiliet/vim-shell'
+Plugin 'lumiliet/vim-smart-object'
+Plugin 'lumiliet/vim-text-objects'
 
 Plugin 'morhetz/gruvbox'
 
@@ -134,7 +135,7 @@ nnore <Leader>i iO
 nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
-nnore <Leader>u :Vimshell 
+nnore <Leader>u :Vimshell %:h<CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> ]l :lnext<CR>
 nnore <silent> [l :lprevious<CR>
@@ -217,12 +218,6 @@ endfunction
 
 com! -nargs=0 Snippet :call s:ViewSnippet()
 nnore <Leader>s :Snippet<CR>
-
-onore if :<c-u>normal! ggVG<cr>
-onore af :<c-u>normal! ggVG<cr>
-
-onore iv :<c-u>normal! gv<cr>
-onore av :<c-u>normal! gv<cr>
 
 let g:gruvbox_bold=0
 
