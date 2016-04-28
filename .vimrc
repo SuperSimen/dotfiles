@@ -43,6 +43,7 @@ Plugin 'lumiliet/vim-run'
 Plugin 'lumiliet/vim-shell'
 Plugin 'lumiliet/vim-smart-object'
 Plugin 'lumiliet/vim-text-objects'
+Plugin 'lumiliet/vim-sessions'
 
 Plugin 'morhetz/gruvbox'
 
@@ -197,6 +198,7 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
             \/home/simen/.vim/bundle/vim-cold-turkey/**,
             \/home/simen/.vim/bundle/vim-shell/**,
             \/home/simen/.vim/bundle/vim-smart-object/**,
+            \/home/simen/.vim/bundle/vim-sessions/**,
             \/home/simen/.vim/bundle/vim-snippets/UltiSnips'
 
 let g:coldturkey_motions='h,j,k,l,w,b'
@@ -217,7 +219,6 @@ function! s:OpenSnippetFile(filetype)
 endfunction
 
 com! -nargs=0 Snippet :call s:ViewSnippet()
-nnore <Leader>s :Snippet<CR>
 
 let g:gruvbox_bold=0
 
