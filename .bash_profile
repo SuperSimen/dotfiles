@@ -5,4 +5,4 @@ export HISTSIZE=10000
 
 shopt -s histappend
 
-source ~/dotfiles/.bash_commands
+source ~/dotfiles/bash_commands.sh
