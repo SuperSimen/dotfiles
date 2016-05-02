@@ -22,7 +22,7 @@ super + {s,f}
 	bspc window -t {floating,fullscreen}
 
 super + Tab
-	bspc desktop -f last
+	bspc monitor -f last
 
 super + apostrophe
 	bspc window -s last
