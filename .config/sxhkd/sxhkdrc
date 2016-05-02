@@ -21,15 +21,18 @@ super + e
 super + {s,f}
 	bspc window -t {floating,fullscreen}
 
-super + Tab
-	bspc monitor -f last
+super + shift + f
+    bspc desktop -f next.free
+
+super + {_,shift +}Tab
+	bspc monitor -f {next,prev}
 
 super + apostrophe
 	bspc window -s last
 
-super + {o,i}
+super + {_,shift +,ctrl +}{o,i}
 	bspc control --record-history off; \
-	bspc window {older,newer} -f; \
+	bspc {window,desktop,monitor} {older,newer} -f; \
 	bspc control --record-history on
 
 super + y
