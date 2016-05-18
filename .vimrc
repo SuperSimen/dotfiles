@@ -229,4 +229,8 @@ endfunction
 
 com! -nargs=0 W :call s:SudoSave()
 
+let &sessionoptions = substitute(&sessionoptions, 'options,', '', '')
 
+
+let g:smart_object_commands = 'c,d,y'
+let g:smart_object_blocks = '(),[],{}'
