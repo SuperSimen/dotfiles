@@ -33,14 +33,15 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
 Plugin 'othree/html5.vim'
-
 Plugin 'xolox/vim-misc'
+Plugin 'mxw/vim-jsx'
+
 Plugin 'lumiliet/vimfiler.vim'
 Plugin 'lumiliet/vim-pathfinder'
 Plugin 'lumiliet/vim-twig'
 Plugin 'lumiliet/vim-run'
 " Plugin 'lumiliet/vim-cold-turkey'
-Plugin 'lumiliet/vim-shell'
+" Plugin 'lumiliet/vim-shell'
 Plugin 'lumiliet/vim-smart-object'
 Plugin 'lumiliet/vim-text-objects'
 Plugin 'lumiliet/vim-sessions'
@@ -136,7 +137,7 @@ nnore <Leader>i iO
 nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
-nnore <Leader>u :Vimshell %:h<CR>
+nnore <Leader>u :silent exec "!urxvt -cd %:p:h  &" <CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> ]l :lnext<CR>
 nnore <silent> [l :lprevious<CR>
@@ -161,6 +162,7 @@ let g:vimfiler_custom_key_mappings = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["jsx"] }
 
 
 "
