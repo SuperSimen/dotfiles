@@ -25,7 +25,7 @@ super + shift + f
     bspc desktop -f next.free
 
 super + {_,shift +}Tab
-	bspc monitor -f {next,prev}
+	bspc monitor -f {prev,next}
 
 super + apostrophe
 	bspc window -s last

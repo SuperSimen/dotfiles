@@ -1,13 +1,9 @@
 xsetroot -cursor_name left_ptr
 
-# sudo systemctl start pommed
-
 daze
 applyUSBKeyboardConfigIfConnected
 
-xrdb ~/.xresources/base16-harmonic16.dark
-# synclient PalmDetect=1
-
+xrdb ~/dotfiles/.xresources/gruvbox.dark
 
 sudo sysctl -p
 
