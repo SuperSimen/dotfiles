@@ -24,12 +24,14 @@ super + {s,f}
 super + shift + f
     bspc desktop -f next.free
 
-super + {_,shift +}Tab
-	bspc monitor -f {prev,next}
-
-super + {_,shift +,ctrl +}{o,i}
+super + {_,ctrl +}{o,i}
 	bspc control --record-history off; \
-	bspc {window,desktop,monitor} {older,newer} -f; \
+	bspc {window,monitor} {older,newer} -f; \
+	bspc control --record-history on
+
+super + shift + {o,i}
+	bspc control --record-history off; \
+	bspc desktop {older.local,newer.local} -f; \
 	bspc control --record-history on
 
 super + y
@@ -61,7 +63,6 @@ super + {_,shift + }c
 
 super + {_,shift + }period
 	bspc desktop -C {forward,backward}
-
 
 super + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
