@@ -27,9 +27,6 @@ super + shift + f
 super + {_,shift +}Tab
 	bspc monitor -f {prev,next}
 
-super + apostrophe
-	bspc window -s last
-
 super + {_,shift +,ctrl +}{o,i}
 	bspc control --record-history off; \
 	bspc {window,desktop,monitor} {older,newer} -f; \
@@ -41,8 +38,23 @@ super + y
 super + m
 	bspc window -s biggest
 
-super + {_,shift + }{h,j,k,l}
-	bspc window -{f,s} {left,down,up,right}
+super + {h,j,k,l}
+	bspc window -f {left,down,up,right}
+
+super + shift + {h,l}
+	bspc monitor -f {next,prev}
+
+super + shift + {j,k}
+	bspc desktop -f {next,prev}
+
+super + apostrophe
+	bspc window -s last
+
+super + {Left,Down,Up,Right}
+	bspc window -s {left,down,up,right}
+
+super + shift + {Left,Right}
+	bspc window -m {next,prev}
 
 super + {_,shift + }c
 	bspc window -f {next,prev}
@@ -50,14 +62,6 @@ super + {_,shift + }c
 super + {_,shift + }period
 	bspc desktop -C {forward,backward}
 
-super + {Up,Down}
-	bspc desktop -f {prev,next}
-
-super + {Left,Right}
-	bspc monitor -f {prev,next}
-
-super + shift + {Left,Right}
-	bspc window -m {left,right};
 
 super + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
