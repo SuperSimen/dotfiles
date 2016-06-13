@@ -34,6 +34,9 @@ super + shift + {o,i}
 	bspc desktop {older.local,newer.local} -f; \
 	bspc control --record-history on
 
+super + {_,shift +} Tab
+	bspc monitor -f {prev,next}
+
 super + y
 	bspc window -w last.manual
 
@@ -76,8 +79,8 @@ super + alt + {h,j,k,l}
 super + alt + shift + {h,j,k,l}
 	bspc window -e {right -10,up +10,down -10,left +10}
 
-super + ctrl + {1-9}
-	bspc window -r 0.{1-9}
+super + ctrl + {1,2,3,4,5,6,7,8,9}
+	bspc window -r 0.{1,2,3333,4,5,6666,7,8,9}
 
 super + {1-9,0}
 	bspc desktop -f ^$(bspwm_convertDesktopNumber {1-9,10})
@@ -127,8 +130,8 @@ ctrl + space ; {f,s,e,n,c}
 	{firefox, spotify, evince, nautilus, chromium}
 
 # Chrome-apps
-ctrl + space ; a ; {s,e,p,j,w}
-	{chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action, chromium --app=http://overapi.com/php/, chromium --app=http://overapi.com/javascript/, chromium --app=https://www.wunderlist.com/}
+ctrl + space ; a ; {s,e,p,j,w,m}
+	{chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action, chromium --app=http://overapi.com/php/, chromium --app=http://overapi.com/javascript/, chromium --app=https://www.wunderlist.com/, chromium --app=https://www.facebook.com/messages/}
 
 # Folders
 ctrl + space ; u ; {t,m,l}

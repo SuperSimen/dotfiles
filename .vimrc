@@ -35,6 +35,9 @@ Plugin 'ervandew/supertab'
 Plugin 'othree/html5.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'mxw/vim-jsx'
+Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'tpope/vim-fireplace'
+
 
 Plugin 'lumiliet/vimfiler.vim'
 Plugin 'lumiliet/vim-pathfinder'
