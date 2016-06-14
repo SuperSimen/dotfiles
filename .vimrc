@@ -38,7 +38,6 @@ Plugin 'mxw/vim-jsx'
 Plugin 'kien/rainbow_parentheses.vim'
 " Plugin 'tpope/vim-fireplace'
 
-
 Plugin 'lumiliet/vimfiler.vim'
 Plugin 'lumiliet/vim-pathfinder'
 Plugin 'lumiliet/vim-twig'
@@ -60,7 +59,7 @@ Plugin 'morhetz/gruvbox'
 " Plugin 'awk.vim'
 " Plugin 'vim-scripts/ShowMarks'
 
-Plugin 'chriskempson/base16-vim'
+" Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on
