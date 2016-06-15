@@ -19,7 +19,6 @@ Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mileszs/ack.vim'
-Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'scrooloose/syntastic'
 Plugin 'rstacruz/sparkup'
 Plugin 'Shougo/unite.vim'
@@ -47,6 +46,7 @@ Plugin 'lumiliet/vim-run'
 Plugin 'lumiliet/vim-smart-object'
 Plugin 'lumiliet/vim-text-objects'
 Plugin 'lumiliet/vim-sessions'
+Plugin 'lumiliet/snippets'
 
 Plugin 'morhetz/gruvbox'
 
@@ -58,6 +58,7 @@ Plugin 'morhetz/gruvbox'
 " Plugin 'flazz/vim-colorschemes'
 " Plugin 'awk.vim'
 " Plugin 'vim-scripts/ShowMarks'
+" Plugin 'xolox/vim-colorscheme-switcher'
 
 " Plugin 'chriskempson/base16-vim'
 
@@ -125,8 +126,8 @@ nnore <C-e> 3<C-e>
 nnore <C-y> 3<C-y>
 nnore <Down> gj
 nnore <Up> gk
-nnore <Leader>j :bp<CR>
-nnore <Leader>k :bn<CR>
+nnore <Leader>j :bn<CR>
+nnore <Leader>k :bp<CR>
 nnore <Leader>l :tabn<CR>
 nnore <Leader>h :tabp<CR>
 nnore <Leader>n :tabe<CR>
@@ -185,16 +186,14 @@ set statusline+=%*
 " UltiSnips
 "
 
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-
+inore <silent> <c-l> <c-r>=UltiSnips#ExpandSnippetOrJump()<cr>
 
 function! OpenMirrorFile()
     execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
 endfunction
 
-set suffixesadd+=.php,.js
+set suffixesadd+=.php,.js,.jsx
 
 let g:pathfinder_include='/home/simen/Dropbox/documents,
             \/home/simen/.vim/bundle/vim-pathfinder/**,
@@ -203,38 +202,44 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
             \/home/simen/.vim/bundle/vim-shell/**,
             \/home/simen/.vim/bundle/vim-smart-object/**,
             \/home/simen/.vim/bundle/vim-sessions/**,
-            \/home/simen/.vim/bundle/vim-snippets/UltiSnips'
-
-let g:coldturkey_motions='h,j,k,l,w,b'
-let g:coldturkey_max_repeats=100
-let g:coldturkey_time_window=1
-
-
-function! s:ViewSnippet(...)
-    if a:0 == 1
-        call s:OpenSnippetFile(a:1)
-    else
-        call s:OpenSnippetFile(&filetype)
-    endif
-endfunction
-
-function! s:OpenSnippetFile(filetype)
-    execute ":find " . a:filetype . ".snippets"
-endfunction
-
-com! -nargs=0 Snippet :call s:ViewSnippet()
+            \/home/simen/.vim/bundle/snippets'
 
 let g:gruvbox_bold=0
-
 
 function! s:SudoSave()
     exe ":w ! sudo tee % > /dev/null"
 endfunction
 
 com! -nargs=0 W :call s:SudoSave()
+com! -nargs=0 Snippets :call UltiSnips#ListSnippets()
 
 let &sessionoptions = substitute(&sessionoptions, 'options,', '', '')
 
-
 let g:smart_object_commands = 'c,d,y'
 let g:smart_object_blocks = '(),[],{}'
+
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+let g:rbpt_max = 16
+
+au VimEnter * :RainbowParenthesesToggle
+au Syntax clojure :RainbowParenthesesLoadRound
+
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/snippets/UltiSnips"
