@@ -219,7 +219,7 @@ function! s:ViewSnippet(...)
 endfunction
 
 function! s:OpenSnippetFile(filetype)
-    execute ":find " . a:filetype . ".snippets"
+    execute ":find " . substitute(a:filetype, '\..*$', '', '') . ".snippets"
 endfunction
 
 com! -nargs=0 Snippet :call s:ViewSnippet()
