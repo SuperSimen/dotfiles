@@ -34,10 +34,12 @@ Plugin 'ervandew/supertab'
 Plugin 'othree/html5.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'mxw/vim-jsx'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'tpope/vim-fireplace'
-" Plugin 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-static'
+Plugin 'raymond-w-ko/vim-niji'
 
+
+"Write new explorer based on find .
 Plugin 'lumiliet/vimfiler.vim'
 Plugin 'lumiliet/vim-pathfinder'
 Plugin 'lumiliet/vim-twig'
@@ -47,6 +49,7 @@ Plugin 'lumiliet/vim-run'
 Plugin 'lumiliet/vim-smart-object'
 Plugin 'lumiliet/vim-text-objects'
 Plugin 'lumiliet/vim-sessions'
+Plugin 'lumiliet/vim-clojure'
 Plugin 'lumiliet/snippets'
 
 Plugin 'morhetz/gruvbox'
@@ -145,7 +148,6 @@ nnore <Leader>u :silent exec "!urxvt -cd %:p:h  &" <CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> ]l :lnext<CR>
 nnore <silent> [l :lprevious<CR>
-nnore <silent> cpf :%Eval<CR>
 
 
 nnore <Leader>dd oLog::debug();hi
@@ -191,7 +193,10 @@ set statusline+=%*
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-" inore <silent> <c-l> <c-r>=UltiSnips#ExpandSnippetOrJump()<cr>
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/snippets/UltiSnips"
+
+
+
 
 function! OpenMirrorFile()
     execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
@@ -222,28 +227,3 @@ let &sessionoptions = substitute(&sessionoptions, 'options,', '', '')
 let g:smart_object_commands = 'c,d,y'
 let g:smart_object_blocks = '(),[],{}'
 
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-
-let g:rbpt_max = 16
-
-" au VimEnter * :RainbowParenthesesToggle
-" au Syntax clojure :RainbowParenthesesLoadRound
-
-let g:UltiSnipsSnippetsDir = "~/.vim/bundle/snippets/UltiSnips"
