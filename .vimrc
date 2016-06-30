@@ -1,74 +1,4 @@
-"
-" Plugins
-"
-
-set nocompatible
-filetype off
-
-set rtp+=/home/simen/.vim/bundle/Vundle.vim
-call vundle#begin('/home/simen/.vim/bundle')
-
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'pangloss/vim-javascript'
-"Plugin 'marijnh/tern_for_vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'bling/vim-airline'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'rstacruz/sparkup'
-Plugin 'Shougo/unite.vim'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'neovimhaskell/haskell-vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-commentary'
-Plugin 'ervandew/supertab'
-Plugin 'othree/html5.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'mxw/vim-jsx'
-Plugin 'tpope/vim-fireplace'
-Plugin 'guns/vim-clojure-static'
-Plugin 'raymond-w-ko/vim-niji'
-
-
-"Write new explorer based on find .
-Plugin 'lumiliet/vimfiler.vim'
-Plugin 'lumiliet/vim-pathfinder'
-Plugin 'lumiliet/vim-twig'
-Plugin 'lumiliet/vim-run'
-" Plugin 'lumiliet/vim-cold-turkey'
-" Plugin 'lumiliet/vim-shell'
-Plugin 'lumiliet/vim-smart-object'
-Plugin 'lumiliet/vim-text-objects'
-Plugin 'lumiliet/vim-sessions'
-Plugin 'lumiliet/vim-clojure'
-Plugin 'lumiliet/snippets'
-
-Plugin 'morhetz/gruvbox'
-
-" Plugin 'wincent/command-t'
-" Plugin 'kien/ctrlp.vim'
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'xolox/vim-easytags'
-" Plugin 'altercation/vim-colors-solarized'
-" Plugin 'flazz/vim-colorschemes'
-" Plugin 'awk.vim'
-" Plugin 'vim-scripts/ShowMarks'
-" Plugin 'xolox/vim-colorscheme-switcher'
-
-" Plugin 'chriskempson/base16-vim'
-
-call vundle#end()
-filetype plugin indent on
-
+so /home/simen/dotfiles/plugins.vim
 
 
 
@@ -150,18 +80,6 @@ nnore <silent> ]l :lnext<CR>
 nnore <silent> [l :lprevious<CR>
 
 
-nnore <Leader>dd oLog::debug();hi
-nnore <Leader>dw oLog::warning();hi
-
-
-"
-" Vimfiler
-"
-
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_custom_key_mappings = 1
-
-
 "
 " Syntastic
 "
@@ -196,8 +114,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsSnippetsDir = "~/.vim/bundle/snippets/UltiSnips"
 
 
-
-
 function! OpenMirrorFile()
     execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
 endfunction
@@ -211,9 +127,8 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
             \/home/simen/.vim/bundle/vim-shell/**,
             \/home/simen/.vim/bundle/vim-smart-object/**,
             \/home/simen/.vim/bundle/vim-sessions/**,
+            \/home/simen/.vim/bundle/vim-flack/**,
             \/home/simen/.vim/bundle/snippets'
-
-let g:gruvbox_bold=0
 
 function! s:SudoSave()
     exe ":w ! sudo tee % > /dev/null"
