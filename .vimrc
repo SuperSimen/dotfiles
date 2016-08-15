@@ -142,3 +142,5 @@ let &sessionoptions = substitute(&sessionoptions, 'options,', '', '')
 let g:smart_object_commands = 'c,d,y'
 let g:smart_object_blocks = '(),[],{}'
 
+hi Normal ctermbg=NONE
+
