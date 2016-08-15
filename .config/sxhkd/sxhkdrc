@@ -44,16 +44,16 @@ super + {h,j,k,l}
 	bspc window -f {left,down,up,right}
 
 super + shift + {h,l}
-	bspc monitor -f {next,prev}
+	bspc monitor -f {prev,next}
 
 super + shift + {j,k}
 	bspc desktop -f {next,prev}
 
 super + {_,shift +} Tab
-	bspc monitor -f {prev,next}
+	bspc monitor -f {next,prev}
 
 super + alt + {1,2,3}
-	bspc monitor -f {^2,^1,^3}
+	bspc monitor -f {^3,^1,^2}
 
 super + apostrophe
 	bspc window -s last
