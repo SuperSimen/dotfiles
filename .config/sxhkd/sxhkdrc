@@ -53,7 +53,7 @@ super + Tab
 	bspc monitor -f last
 
 super + alt + {1,2,3}
-	bspc monitor -f {^3,^1,^2}
+	bspc monitor -f {^1,^2,^3}
 
 super + apostrophe
 	bspc window -s last
@@ -62,7 +62,7 @@ super + {Left,Down,Up,Right}
 	bspc window -s {left,down,up,right}
 
 super + shift + {Left,Right}
-	bspc window -m {next,prev}
+	bspc window -m {prev,next}
 
 super + {_,shift + }c
 	bspc window -f {next,prev}
@@ -122,7 +122,7 @@ super + {_,shift + }u
     {hideActiveWindow,unhideLastHiddenWindow}
 
 super + {_,shift + }plus
-    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 50 ))
 
 # Dmenu
 super + space
