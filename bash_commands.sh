@@ -6,6 +6,7 @@ alias gst='git status'
 alias gush='git push'
 alias gull='git pull --rebase'
 
+
 function gcom() {
     git commit -m "$1"
 }
@@ -35,3 +36,5 @@ function vman() {
 
 # OTHER
 alias ls='ls --color=auto'
+
+alias nrepl='lein repl :connect $(cat .nrepl-port)'
