@@ -74,10 +74,12 @@ nnore <Leader>i iO
 nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>f :find 
-nnore <Leader>u :silent exec "!urxvt -cd %:p:h  &" <CR>
+nnore <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> ]l :lnext<CR>
 nnore <silent> [l :lprevious<CR>
+
+
 
 
 "
@@ -114,6 +116,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsSnippetsDir = "~/.vim/bundle/snippets/UltiSnips"
 
 
+
 function! OpenMirrorFile()
     execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
 endfunction
@@ -144,3 +147,7 @@ let g:smart_object_blocks = '(),[],{}'
 
 hi Normal ctermbg=NONE
 
+function! FloatingTerminal()
+    silent exec "!floating-terminal -cd %:p:h &" 
+    exec "redraw!"
+endfunction
