@@ -137,12 +137,15 @@ ctrl + space ; a ; {s,e,p,j,w,m}
 	{chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action, chromium --app=http://overapi.com/php/, chromium --app=http://overapi.com/javascript/, chromium --app=https://www.wunderlist.com/, chromium --app=https://www.facebook.com/messages/}
 
 # Folders
-ctrl + space ; u ; {t,m,l}
-	{urxvt -cd ~/src/test.no/, urxvt -cd ~/src/mobiltelefoni.no/asset, urxvt -cd ~/src/lån.nu}
+ctrl + space ; u ; {t,m,l,k,g}
+	{urxvt -cd ~/src/test.no/, urxvt -cd ~/src/mobiltelefoni.no/asset, urxvt -cd ~/src/lån.nu, urxvt -cd ~/src/kredittkort.com, urxvt -cd ~/src/generic-table}
 
 # SSH
 ctrl + space ; u ; {1,2,3,4}
 	{urxvt -e ssh vil1.net, urxvt -e ssh osl2.net, urxvt -e ssh osl3.net, urxvt -e ssh osl4.net}
+
+ctrl + space ; r ; {n}
+    {urxvt -e node}
 
 
 # make sxhkd reload its configuration files:
