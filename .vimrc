@@ -66,6 +66,7 @@ nnore <Leader>l :tabn<CR>
 nnore <Leader>h :tabp<CR>
 nnore <Leader>n :tabe<CR>
 nnore <Leader>ev :e /home/simen/.vimrc<CR>
+nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
 nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
@@ -89,7 +90,8 @@ nnore <silent> [l :lprevious<CR>
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["jsx"] }
+let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["javascript","jsx"] }
+let g:syntastic_javascript_checkers = ['eslint']
 
 
 "
