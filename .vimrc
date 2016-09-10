@@ -66,18 +66,34 @@ nnore <Leader>j :bn<CR>
 nnore <Leader>k :bp<CR>
 nnore <Leader>l :tabn<CR>
 nnore <Leader>n :tabe<CR>
+nnore <Leader>ev :e /home/simen/.vimrc<CR>
+nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
+nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
+nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
+nnore <Leader>em :call OpenMirrorFile()<CR>
+nnore <Leader>bd :bp<bar>bd #<CR>
+nnore <Leader>i iO
 nnore <Leader>t :Tagbar<cr>
-nnore <Leader>u :silent exec "!urxvt -cd %:p:h  &" <CR>
+nnore <silent> <Leader>r :RunCode<CR>
+nnore <Leader>f :find 
+nnore <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <silent> ]l :lnext<CR>
 nnore <silent> [l :lprevious<CR>
 
 
+
+
+"
+" Syntastic
+"
+
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["jsx"] }
+let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["javascript","jsx"] }
+let g:syntastic_javascript_checkers = ['eslint']
 
 
 let g:airline_left_sep=''
@@ -94,6 +110,7 @@ let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsSnippetsDir = "~/.vim/bundle/snippets/UltiSnips"
+
 
 
 function! OpenMirrorFile()
@@ -129,3 +146,7 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
 com! -nargs=0 Pig :Piggieback 9001
 hi Normal ctermbg=NONE
 
+function! FloatingTerminal()
+    silent exec "!floating-terminal -cd %:p:h &" 
+    exec "redraw!"
+endfunction

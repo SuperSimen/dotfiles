@@ -38,6 +38,7 @@ Plugin 'lumiliet/vim-sessions'
 Plugin 'lumiliet/vim-clojure'
 Plugin 'lumiliet/snippets'
 Plugin 'lumiliet/vim-flack'
+
 Plugin 'morhetz/gruvbox'
 
 
