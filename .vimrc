@@ -124,6 +124,8 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
             \/home/simen/.vim/bundle/vim-flack/**,
             \/home/simen/src/jsutils/**'
 
-au VimLeave * :Piggieback!
+" au VimLeave * :Piggieback!
 
 com! -nargs=0 Pig :Piggieback 9001
+hi Normal ctermbg=NONE
+

@@ -1,6 +1,8 @@
 URxvt.scrollBar: false
 URxvt.font: -*-proggycleancp-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt*iso14755: False
+urxvt*transparent: true
+urxvt*shading: 30
 
 ! -----------------------------------------------------------------------------
 ! File: gruvbox-dark.xresources
