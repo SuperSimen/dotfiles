@@ -32,9 +32,9 @@ set history=1000
 set tabpagemax=50
 set backspace=2
 set completeopt-=preview
-set directory=/home/simen/.vim/temp"
-set backupdir=/home/simen/.vim/backup"
-set undodir=/home/simen/.vim/undo"
+set directory=/home/simen/.config/nvim/temp"
+set backupdir=/home/simen/.config/nvim/backup"
+set undodir=/home/simen/.config/nvim/undo"
 set backup
 set undofile
 set splitright
@@ -63,7 +63,8 @@ nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
 nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
-nnore <Leader>ev :e /home/simen/.vimrc<CR>
+nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
+nnore <Leader>ev :e /home/simen/dotfiles/vimrc.vim<CR>
 nnore <Leader>f :find 
 nnore <Leader>h :tabp<CR>
 nnore <Leader>i iO
@@ -71,10 +72,6 @@ nnore <Leader>j :bn<CR>
 nnore <Leader>k :bp<CR>
 nnore <Leader>l :tabn<CR>
 nnore <Leader>n :tabe<CR>
-nnore <Leader>ev :e /home/simen/.vimrc<CR>
-nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
-nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
-nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
@@ -117,7 +114,7 @@ set laststatus=2   " Always show the statusline
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsSnippetsDir = "~/.vim/bundle/snippets/UltiSnips"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/plugged/snippets/UltiSnips"
 
 
 
@@ -139,17 +136,6 @@ let &sessionoptions = substitute(&sessionoptions, 'options,', '', '')
 let g:smart_object_commands = 'c,d,y'
 let g:smart_object_blocks = '(),[],{}'
 
-let g:pathfinder_include='/home/simen/Dropbox/documents,
-            \/home/simen/.vim/bundle/vim-pathfinder/**,
-            \/home/simen/.vim/bundle/vim-run/**,
-            \/home/simen/.vim/bundle/vim-cold-turkey/**,
-            \/home/simen/.vim/bundle/vim-shell/**,
-            \/home/simen/.vim/bundle/vim-smart-object/**,
-            \/home/simen/.vim/bundle/vim-sessions/**,
-            \/home/simen/.vim/bundle/vim-flack/**,
-            \/home/simen/src/jsutils/**'
-
-" au VimLeave * :Piggieback!
 
 com! -nargs=0 Pig :Piggieback 9001
 hi Normal ctermbg=NONE

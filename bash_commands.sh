@@ -22,7 +22,7 @@ function gadd() {
 
 # VIM
 function v() {
-    vim "$@"
+    nvim "$@"
 }
 
 function vman() {
@@ -31,10 +31,6 @@ function vman() {
     then
         echo "$manResult" | vim - -RM
     fi
-}
-
-function vim() {
-    nvim "$@"
 }
 
 # OTHER
