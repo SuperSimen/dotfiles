@@ -79,8 +79,8 @@ nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
-nnore <Leader>f :find 
-nnore <Leader>F :Files<cr>
+" nnore <Leader>f :find 
+nnore <Leader>f :Files<cr>
 nnore <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> ]l :lnext<CR>
