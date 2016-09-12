@@ -62,7 +62,7 @@ super + {Left,Down,Up,Right}
 	bspc window -s {left,down,up,right}
 
 super + shift + {Left,Right}
-	bspc window -m {prev,next}
+	bspc window -m {next,prev}
 
 super + {_,shift + }c
 	bspc window -f {next,prev}
