@@ -87,11 +87,11 @@ nnore <silent> ]l :lnext<CR>
 nnore <silent> [l :lprevious<CR>
 
 if has('nvim')
-    tnore <c-z> <c-\><c-n>
-    tnore <c-j> <c-\><c-n><c-w>j
-    tnore <c-k> <c-\><c-n><c-w>k
-    tnore <c-h> <c-\><c-n><c-w>h
-    tnore <c-l> <c-\><c-n><c-w>l
+    tnore <Esc> <c-\><c-n>
+    " tnore <c-j> <c-\><c-n><c-w>j
+    " tnore <c-k> <c-\><c-n><c-w>k
+    " tnore <c-h> <c-\><c-n><c-w>h
+    " tnore <c-l> <c-\><c-n><c-w>l
 endif
 
 
