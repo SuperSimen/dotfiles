@@ -7,6 +7,7 @@ set background=dark
 set autoread
 set nrformats=
 set incsearch
+set nohlsearch
 set hidden
 set ignorecase
 set smartcase
@@ -20,7 +21,11 @@ set number
 set showcmd
 set wrap
 set mouse=a
-set ttymouse=urxvt
+
+if !has('nvim')
+    set ttymouse=urxvt
+endif
+
 set timeoutlen=1000
 set ttimeoutlen=10
 set history=1000
@@ -75,13 +80,21 @@ nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>i iO
 nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
-nnore <Leader>f :find 
+" nnore <Leader>f :find 
+nnore <Leader>f :Files<cr>
 nnore <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <silent> ]l :lnext<CR>
 nnore <silent> [l :lprevious<CR>
 
+if has('nvim')
+    tnore <Esc> <c-\><c-n>
+    " tnore <c-j> <c-\><c-n><c-w>j
+    " tnore <c-k> <c-\><c-n><c-w>k
+    " tnore <c-h> <c-\><c-n><c-w>h
+    " tnore <c-l> <c-\><c-n><c-w>l
+endif
 
 
 
@@ -99,11 +112,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 set laststatus=2   " Always show the statusline
-" set encoding=utf-8 " Necessary to show Unicode glyphs
-" set noshowmode
-" set statusline=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
 
 
 let g:UltiSnipsExpandTrigger="<c-l>"
@@ -150,3 +158,5 @@ function! FloatingTerminal()
     silent exec "!floating-terminal -cd %:p:h &" 
     exec "redraw!"
 endfunction
+
+let g:deoplete#enable_at_startup = 1

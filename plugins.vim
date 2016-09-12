@@ -23,6 +23,11 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'Shougo/deoplete.nvim'
+" Plugin 'justinmk/vim-sneak'
+
 
 "
 "My own plugins

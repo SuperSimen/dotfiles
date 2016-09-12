@@ -33,6 +33,9 @@ function vman() {
     fi
 }
 
+function vim() {
+    nvim "$@"
+}
 
 # OTHER
 alias ls='ls --color=auto'
