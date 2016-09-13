@@ -137,7 +137,6 @@ let g:smart_object_commands = 'c,d,y'
 let g:smart_object_blocks = '(),[],{}'
 
 
-com! -nargs=0 Pig :Piggieback 9001
 hi Normal ctermbg=NONE
 
 function! FloatingTerminal()
@@ -146,3 +145,6 @@ function! FloatingTerminal()
 endfunction
 
 let g:deoplete#enable_at_startup = 1
+
+let g:fzf_layout = {'down': '~10%'}
+
