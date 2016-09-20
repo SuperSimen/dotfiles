@@ -2,7 +2,7 @@ so /home/simen/dotfiles/plugins.vim
 
 runtime macros/matchit.vim
 syntax on
-colorscheme gruvbox
+colorscheme seoul256
 set background=dark
 set autoread
 set nrformats=
@@ -59,11 +59,13 @@ nnore <Up> gk
 
 nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <Leader>c :Eval<CR>
+vnore <Leader>c :Eval<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
 nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
+nnore <Leader>et :e /home/simen/.config/termite/config<CR>
 nnore <Leader>ev :e /home/simen/dotfiles/vimrc.vim<CR>
 nnore <Leader>f :find 
 nnore <Leader>h :tabp<CR>
@@ -141,8 +143,18 @@ com! -nargs=0 Pig :Piggieback 9001
 hi Normal ctermbg=NONE
 
 function! FloatingTerminal()
-    silent exec "!floating-terminal -cd %:p:h &" 
+    silent exec "!floating-terminal -d %:p:h &" 
     exec "redraw!"
 endfunction
 
 let g:deoplete#enable_at_startup = 1
+
+let g:pathfinder_include='/home/simen/Dropbox/documents,
+             \/home/simen/.config/nvim/plugged/vim-pathfinder/**,
+             \/home/simen/.config/nvim/plugged/vim-run/**,
+             \/home/simen/.config/nvim/plugged/vim-cold-turkey/**,
+             \/home/simen/.config/nvim/plugged/vim-shell/**,
+             \/home/simen/.config/nvim/plugged/vim-smart-object/**,
+             \/home/simen/.config/nvim/plugged/vim-sessions/**,
+             \/home/simen/.config/nvim/plugged/vim-flack/**,
+             \/home/simen/src/jsutils/**'

@@ -110,7 +110,7 @@ super + @button{1-3}
 	bspc pointer -u
 
 super + {_, shift +}Return
-	{urxvt -cd $(pwd), floating-terminal}
+	{termite, floating-terminal}
 
 super + {_,shift + }minus
 	bspwm_cycleWindowsOfSameClass {next,prev}

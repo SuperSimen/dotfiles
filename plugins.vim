@@ -24,7 +24,7 @@ Plug 'Shougo/deoplete.nvim'
 "
 "My own Plugs
 "
-" Plug 'lumiliet/vim-pathfinder'
+Plug 'lumiliet/vim-pathfinder'
 Plug 'lumiliet/vim-twig'
 Plug 'lumiliet/vim-run'
 " Plug 'lumiliet/vim-cold-turkey'
@@ -37,6 +37,8 @@ Plug 'lumiliet/snippets'
 Plug 'lumiliet/vim-flack'
 
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/seoul256.vim'
+
 
 
 "
@@ -59,6 +61,9 @@ Plug 'othree/html5.vim'
 Plug 'tpope/vim-fireplace'
 Plug 'guns/vim-clojure-static'
 Plug 'raymond-w-ko/vim-niji'
+" Plug 'guns/vim-sexp'
+" Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
 
 
 
