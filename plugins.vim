@@ -17,7 +17,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'Shougo/deoplete.nvim'
+" Plug 'Shougo/deoplete.nvim'
 " Plug 'justinmk/vim-sneak'
 
 

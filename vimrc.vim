@@ -2,7 +2,7 @@ so /home/simen/dotfiles/plugins.vim
 
 runtime macros/matchit.vim
 syntax on
-colorscheme seoul256
+colorscheme gruvbox
 set background=dark
 set autoread
 set nrformats=
@@ -38,6 +38,7 @@ set undodir=/home/simen/.config/nvim/undo"
 set backup
 set undofile
 set splitright
+set splitbelow
 set wildmenu
 set wildignorecase
 cnoremap <Left> <Space><BS><Left>

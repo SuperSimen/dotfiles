@@ -140,6 +140,9 @@ ctrl + space ; a ; {s,e,p,j,w,m}
 ctrl + space ; u ; {t,m,l,k,g}
 	{urxvt -cd ~/src/test.no/, urxvt -cd ~/src/mobiltelefoni.no/asset, urxvt -cd ~/src/lån.nu, urxvt -cd ~/src/kredittkort.com, urxvt -cd ~/src/generic-table}
 
+ctrl + space ; U
+	urxvt 
+
 # SSH
 ctrl + space ; u ; {1,2,3,4}
 	{urxvt -e ssh vil1.net, urxvt -e ssh osl2.net, urxvt -e ssh osl3.net, urxvt -e ssh osl4.net}
