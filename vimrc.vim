@@ -159,3 +159,6 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
              \/home/simen/.config/nvim/plugged/vim-sessions/**,
              \/home/simen/.config/nvim/plugged/vim-flack/**,
              \/home/simen/src/jsutils/**'
+
+
+let g:fzf_layout = { 'down': '~15%' }
