@@ -14,14 +14,24 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
+<<<<<<< HEAD
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim'
+=======
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+" Plug 'Shougo/deoplete.nvim'
+>>>>>>> 9e817a138efe75674f9598f3d6401438c32ab16c
 " Plug 'justinmk/vim-sneak'
 
 
 "
 "My own Plugs
 "
+<<<<<<< HEAD
+=======
+Plug 'lumiliet/vim-pathfinder'
+>>>>>>> 9e817a138efe75674f9598f3d6401438c32ab16c
 Plug 'lumiliet/vim-twig'
 Plug 'lumiliet/vim-run'
 " Plug 'lumiliet/vim-cold-turkey'
@@ -34,6 +44,8 @@ Plug 'lumiliet/snippets'
 Plug 'lumiliet/vim-pathfinder' | Plug 'lumiliet/vim-flack'
 
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/seoul256.vim'
+
 
 
 "
@@ -56,6 +68,9 @@ Plug 'othree/html5.vim'
 Plug 'tpope/vim-fireplace'
 Plug 'guns/vim-clojure-static'
 Plug 'raymond-w-ko/vim-niji'
+" Plug 'guns/vim-sexp'
+" Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
 
 
 
