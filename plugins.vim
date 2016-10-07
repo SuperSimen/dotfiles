@@ -33,6 +33,7 @@ Plug 'lumiliet/vim-smart-object'
 Plug 'lumiliet/vim-text-objects'
 Plug 'lumiliet/vim-sessions'
 Plug 'lumiliet/vim-clojure'
+Plug 'lumiliet/vim-relapse'
 Plug 'lumiliet/snippets'
 Plug 'lumiliet/vim-pathfinder' | Plug 'lumiliet/vim-flack'
 

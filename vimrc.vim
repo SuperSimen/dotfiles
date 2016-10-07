@@ -59,8 +59,8 @@ nnore <Down> gj
 nnore <Up> gk
 
 nnore <Leader>bd :bp<bar>bd #<CR>
-nnore <Leader>c :Eval<CR>
-vnore <Leader>c :Eval<CR>
+nnore <silent> <Leader>c :Relapse<CR>
+vnore <silent> <Leader>c :Relapse<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
@@ -132,7 +132,7 @@ function! s:SudoSave()
 endfunction
 
 com! -nargs=0 W :call s:SudoSave()
-com! -nargs=0 Snippets :call UltiSnips#ListSnippets()
+com! -nargs=0 ListSnippets :call UltiSnips#ListSnippets()
 
 let &sessionoptions = substitute(&sessionoptions, 'options,', '', '')
 
@@ -157,7 +157,8 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
              \/home/simen/.config/nvim/plugged/vim-smart-object/**,
              \/home/simen/.config/nvim/plugged/vim-sessions/**,
              \/home/simen/.config/nvim/plugged/vim-flack/**,
-             \/home/simen/src/jsutils/**'
+             \/home/simen/.config/nvim/plugged/vim-relapse/**'
 
 
 let g:fzf_layout = { 'down': '~15%' }
+
