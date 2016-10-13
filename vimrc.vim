@@ -68,32 +68,22 @@ nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>et :e /home/simen/.config/termite/config<CR>
 nnore <Leader>ev :e /home/simen/dotfiles/vimrc.vim<CR>
-nnore <Leader>f :find 
-nnore <Leader>h :tabp<CR>
 nnore <Leader>i iO
+nnore <Leader>h :tabp<CR>
 nnore <Leader>j :bn<CR>
 nnore <Leader>k :bp<CR>
 nnore <Leader>l :tabn<CR>
 nnore <Leader>n :tabe<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
-nnore <Leader>bd :bp<bar>bd #<CR>
-nnore <Leader>i iO
-nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
-" nnore <Leader>f :find 
 nnore <Leader>f :Files<cr>
+nnore <silent> <Leader>d :Delaware<cr>
 nnore <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> <Leader>r :RunCode<CR>
-nnore <silent> ]l :lnext<CR>
-nnore <silent> [l :lprevious<CR>
 
 if has('nvim')
     tnore <Esc> <c-\><c-n>
-    " tnore <c-j> <c-\><c-n><c-w>j
-    " tnore <c-k> <c-\><c-n><c-w>k
-    " tnore <c-h> <c-\><c-n><c-w>h
-    " tnore <c-l> <c-\><c-n><c-w>l
 endif
 
 
@@ -157,8 +147,10 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
              \/home/simen/.config/nvim/plugged/vim-smart-object/**,
              \/home/simen/.config/nvim/plugged/vim-sessions/**,
              \/home/simen/.config/nvim/plugged/vim-flack/**,
+             \/home/simen/.config/nvim/plugged/vim-delaware/**,
              \/home/simen/.config/nvim/plugged/vim-relapse/**'
 
 
 let g:fzf_layout = { 'down': '~15%' }
+
 
