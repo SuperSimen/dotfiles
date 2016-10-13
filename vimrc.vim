@@ -81,7 +81,7 @@ nnore <Leader>i iO
 nnore <Leader>t :Tagbar<cr>
 nnore <silent> <Leader>r :RunCode<CR>
 " nnore <Leader>f :find 
-nnore <Leader>f :Files<cr>
+nnore <silent> <Leader>f :call WrapFZF()<cr>
 nnore <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
 nnore <silent> <Leader>r :RunCode<CR>
@@ -105,8 +105,8 @@ endif
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["javascript","jsx"] }
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["jsx"] }
+" let g:syntastic_javascript_checkers = ['eslint']
 
 
 let g:airline_left_sep=''
@@ -161,3 +161,20 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
 
 
 let g:fzf_layout = { 'down': '~15%' }
+
+
+fun! WrapFZF() 
+    exec 'Files ' . FindProjectPath()
+endf
+
+fun! FindProjectPath()
+    let filePath = fnamemodify(getcwd(), ':p')
+    let path = finddir('.git', filePath . ';~/')
+    if len(path)
+        let path = fnamemodify(path, ':h')
+    else
+        let path = fnamemodify(filePath, ':p')
+    endif
+    let path = fnamemodify(path, ':p')
+    return path
+endf

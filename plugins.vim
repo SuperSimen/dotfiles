@@ -53,7 +53,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'rstacruz/sparkup'
 " Plug 'majutsushi/tagbar'
-" Plug 'StanAngeloff/php.vim'
+Plug 'StanAngeloff/php.vim'
 " Plug 'shawncplus/phpcomplete.vim'
 Plug 'othree/html5.vim'
 
