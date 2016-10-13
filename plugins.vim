@@ -24,7 +24,7 @@ Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 "
 "My own Plugs
 "
-Plug 'lumiliet/vim-pathfinder'
+" Plug 'lumiliet/vim-pathfinder'
 Plug 'lumiliet/vim-twig'
 Plug 'lumiliet/vim-run'
 Plug 'lumiliet/vim-delaware'
@@ -36,7 +36,7 @@ Plug 'lumiliet/vim-sessions'
 Plug 'lumiliet/vim-clojure'
 Plug 'lumiliet/vim-relapse'
 Plug 'lumiliet/snippets'
-Plug 'lumiliet/vim-pathfinder' | Plug 'lumiliet/vim-flack'
+Plug 'lumiliet/vim-flack'
 
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'

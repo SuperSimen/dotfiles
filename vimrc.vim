@@ -139,7 +139,7 @@ endfunction
 
 let g:deoplete#enable_at_startup = 1
 
-let g:pathfinder_include='/home/simen/Dropbox/documents,
+let &path='/home/simen/Dropbox/documents,
              \/home/simen/.config/nvim/plugged/vim-pathfinder/**,
              \/home/simen/.config/nvim/plugged/vim-run/**,
              \/home/simen/.config/nvim/plugged/vim-cold-turkey/**,
@@ -155,10 +155,10 @@ let g:fzf_layout = { 'down': '~15%' }
 
 
 fun! WrapFZF() 
-    exec 'Files ' . FindProjectPath()
+    exec 'Files ' . s:FindProjectPath()
 endf
 
-fun! FindProjectPath()
+fun! s:FindProjectPath()
     let filePath = fnamemodify(getcwd(), ':p')
     let path = finddir('.git', filePath . ';~/')
     if len(path)
