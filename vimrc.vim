@@ -83,7 +83,7 @@ nnore <silent> <Leader>d :Delaware<cr>
 nnore <silent> <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader><S-u> :!termite -d %:p:h &<CR>
 nnore <silent> <Leader>r :RunCode<CR>
-nnore <Leader>p :Project 
+nnore <Leader>p :Project ~/src/
 
 com! -nargs=0 W :call s:SudoSave()
 com! -nargs=0 ListSnippets :call UltiSnips#ListSnippets()
