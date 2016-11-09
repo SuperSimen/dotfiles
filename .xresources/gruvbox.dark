@@ -1,5 +1,5 @@
 URxvt.scrollBar: false
-URxvt.font: -*-terminus-*-*-*-*-14-*-*-*-*-*-*-* 
+URxvt.font: -*-terminus-*-*-*-*-18-*-*-*-*-*-*-* 
 URxvt*iso14755: False
 urxvt*transparent: true
 urxvt*shading: 30

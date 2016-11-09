@@ -60,7 +60,6 @@ nnore <Up> gk
 cnoremap <Left> <Space><BS><Left>
 cnoremap <Right> <Space><BS><Right>
 
-nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <silent> <Leader>c :Relapse<CR>
 vnore <silent> <Leader>c :Relapse<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
@@ -79,6 +78,7 @@ nnore <Leader>t :tabe<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <silent> <Leader>f :call ProjectSearch()<cr>
+nnore <Leader>b :Buffers<cr>
 nnore <silent> <Leader>d :Delaware<cr>
 nnore <silent> <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader><S-u> :!termite -d %:p:h &<CR>
@@ -145,7 +145,6 @@ hi Normal ctermbg=NONE
 
 function! FloatingTerminal()
     silent exec "!floating-terminal -d %:p:h &" 
-    exec "redraw!"
 endfunction
 
 let g:deoplete#enable_at_startup = 1
