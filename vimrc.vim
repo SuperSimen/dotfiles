@@ -41,8 +41,7 @@ set splitright
 set splitbelow
 set wildmenu
 set wildignorecase
-cnoremap <Left> <Space><BS><Left>
-cnoremap <Right> <Space><BS><Right>
+
 
 
 let mapleader = "\<Space>"
@@ -58,7 +57,9 @@ nnore <C-y> 3<C-y>
 nnore <Down> gj
 nnore <Up> gk
 
-" nnore <Leader>bd :bp<bar>bd #<CR>
+cnoremap <Left> <Space><BS><Left>
+cnoremap <Right> <Space><BS><Right>
+
 nnore <silent> <Leader>c :Relapse<CR>
 vnore <silent> <Leader>c :Relapse<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
@@ -73,15 +74,25 @@ nnore <Leader>h :tabp<CR>
 nnore <Leader>j :bn<CR>
 nnore <Leader>k :bp<CR>
 nnore <Leader>l :tabn<CR>
-nnore <Leader>n :tabe<CR>
+nnore <Leader>t :tabe<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <silent> <Leader>r :RunCode<CR>
-nnore <silent> <Leader>f :call WrapFZF()<cr>
 nnore <silent> <Leader>b :Buffers<cr>
+nnore <silent> <Leader>f :call ProjectSearch()<cr>
 nnore <silent> <Leader>d :Delaware<cr>
-nnore <Leader>u :call FloatingTerminal()<CR>
-nnore <silent> <Leader>p :.w ! cat<CR>
+nnore <silent> <Leader>u :call FloatingTerminal()<CR>
+nnore <silent> <Leader><S-u> :!termite -d %:p:h &<CR>
 nnore <silent> <Leader>r :RunCode<CR>
+nnore <Leader>p :Project ~/src/
+
+com! -nargs=0 W :call s:SudoSave()
+com! -nargs=0 ListSnippets :call UltiSnips#ListSnippets()
+com! -nargs=1 -complete=file Project :call s:OpenProjectFile("<args>")
+
+fun! s:OpenProjectFile(file)
+    exec "tabe " . a:file . " | lcd " . s:FindProjectPath(a:file)
+endf
+
 
 if has('nvim')
     tnore <Esc> <c-\><c-n>
@@ -122,8 +133,7 @@ function! s:SudoSave()
     exe ":w ! sudo tee % > /dev/null"
 endfunction
 
-com! -nargs=0 W :call s:SudoSave()
-com! -nargs=0 ListSnippets :call UltiSnips#ListSnippets()
+
 
 let &sessionoptions = substitute(&sessionoptions, 'options,', '', '')
 
@@ -135,7 +145,6 @@ hi Normal ctermbg=NONE
 
 function! FloatingTerminal()
     silent exec "!floating-terminal -d %:p:h &" 
-    exec "redraw!"
 endfunction
 
 let g:deoplete#enable_at_startup = 1
@@ -155,12 +164,14 @@ let &path='/home/simen/Dropbox/documents,
 let g:fzf_layout = { 'down': '~15%' }
 
 
-fun! WrapFZF() 
+fun! ProjectSearch() 
     exec 'Files ' . s:FindProjectPath()
 endf
 
-fun! s:FindProjectPath()
-    let filePath = fnamemodify(getcwd(), ':p')
+fun! s:FindProjectPath(...)
+    let directory = a:0 == 1 ? a:1 : getcwd()
+    let filePath = fnamemodify(directory, ':p')
+
     let path = finddir('.git', filePath . ';~/')
     if len(path)
         let path = fnamemodify(path, ':h')
