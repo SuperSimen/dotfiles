@@ -58,7 +58,7 @@ nnore <C-y> 3<C-y>
 nnore <Down> gj
 nnore <Up> gk
 
-nnore <Leader>bd :bp<bar>bd #<CR>
+" nnore <Leader>bd :bp<bar>bd #<CR>
 nnore <silent> <Leader>c :Relapse<CR>
 vnore <silent> <Leader>c :Relapse<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
@@ -77,6 +77,7 @@ nnore <Leader>n :tabe<CR>
 nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <silent> <Leader>f :call WrapFZF()<cr>
+nnore <silent> <Leader>b :Buffers<cr>
 nnore <silent> <Leader>d :Delaware<cr>
 nnore <Leader>u :call FloatingTerminal()<CR>
 nnore <silent> <Leader>p :.w ! cat<CR>
