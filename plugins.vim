@@ -39,7 +39,7 @@ Plug 'lumiliet/snippets'
 Plug 'lumiliet/vim-flack'
 
 Plug 'morhetz/gruvbox'
-Plug 'junegunn/seoul256.vim'
+" Plug 'junegunn/seoul256.vim'
 
 
 
