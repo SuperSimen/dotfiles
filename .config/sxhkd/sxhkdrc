@@ -121,12 +121,10 @@ ctrl + space ; {f,s,e,n,c,k}
 ctrl + space ; a ; {s,e,w,p}
 	{chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action, chromium --app=https://www.wunderlist.com/, chromium --app=https://web.skype.com/}
 
-ctrl + space ; U
-	urxvt 
 
 # SSH
 ctrl + space ; u ; {1,2,3,4}
-	{urxvt -e ssh vil1.net, urxvt -e ssh osl2.net, urxvt -e ssh osl3.net, urxvt -e ssh osl4.net}
+	{termite -e 'ssh vil1.net', termite -e 'ssh osl2.net', termite -e 'ssh osl3.net', termite -e 'ssh osl4.net'}
 
 ctrl + space ; r ; {n}
     {termite -e node}
