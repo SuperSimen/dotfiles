@@ -63,7 +63,7 @@ cnoremap <Right> <Space><BS><Right>
 nnore <silent> <Leader>c :Relapse<CR>
 vnore <silent> <Leader>c :Relapse<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
-nnore <Leader>em :call OpenMirrorFile()<CR>
+" nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
 nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
@@ -75,7 +75,6 @@ nnore <Leader>j :bn<CR>
 nnore <Leader>k :bp<CR>
 nnore <Leader>l :tabn<CR>
 nnore <Leader>t :tabe<CR>
-nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <silent> <Leader>b :Buffers<cr>
 nnore <silent> <Leader>f :call ProjectSearch()<cr>
