@@ -87,6 +87,7 @@ nnore <Leader>p :Project ~/src/
 com! -nargs=0 W :call s:SudoSave()
 com! -nargs=0 ListSnippets :call UltiSnips#ListSnippets()
 com! -nargs=1 -complete=file Project :call s:OpenProjectFile("<args>")
+com! -nargs=0 Ground :call s:GroundToRoot()
 
 fun! s:OpenProjectFile(file)
     exec "tabe " . a:file . " | lcd " . s:FindProjectPath(a:file)
@@ -165,6 +166,10 @@ let g:fzf_layout = { 'down': '~15%' }
 
 fun! ProjectSearch() 
     exec 'Files ' . s:FindProjectPath()
+endf
+
+fun! s:GroundToRoot()
+    exec "lcd " . s:FindProjectPath()
 endf
 
 fun! s:FindProjectPath(...)
