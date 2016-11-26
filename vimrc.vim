@@ -149,8 +149,9 @@ endfunction
 
 let g:deoplete#enable_at_startup = 1
 
-let &path='/home/simen/Dropbox/documents,
+let g:pathfinder_include='/home/simen/Dropbox/documents,
              \/home/simen/.config/nvim/plugged/vim-pathfinder/**,
+             \/home/simen/.config/nvim/plugged/vim-clojure/**,
              \/home/simen/.config/nvim/plugged/vim-run/**,
              \/home/simen/.config/nvim/plugged/vim-cold-turkey/**,
              \/home/simen/.config/nvim/plugged/vim-shell/**,

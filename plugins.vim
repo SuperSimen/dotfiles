@@ -24,7 +24,7 @@ Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 "
 "My own Plugs
 "
-" Plug 'lumiliet/vim-pathfinder'
+Plug 'lumiliet/vim-pathfinder'
 Plug 'lumiliet/vim-twig'
 Plug 'lumiliet/vim-run'
 Plug 'lumiliet/vim-delaware'
@@ -60,7 +60,7 @@ Plug 'StanAngeloff/php.vim'
 Plug 'othree/html5.vim'
 
 "Clojure
-Plug 'tpope/vim-fireplace'
+" Plug 'tpope/vim-fireplace'
 Plug 'guns/vim-clojure-static'
 Plug 'raymond-w-ko/vim-niji'
 " Plug 'guns/vim-sexp'
