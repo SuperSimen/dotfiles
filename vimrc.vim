@@ -68,7 +68,7 @@ nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
 nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>et :e /home/simen/.config/termite/config<CR>
-nnore <Leader>ev :e /home/simen/dotfiles/vimrc.vim<CR>
+nnore <Leader>ev :e /home/simen/.config/nvim/init.vim<CR>
 nnore <Leader>i iO
 nnore <Leader>h :tabp<CR>
 nnore <Leader>j :bn<CR>
