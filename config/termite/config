@@ -1,5 +1,5 @@
 [options]
-font = terminus 14
+font = terminus 12
 browser = chromium
 
 [colors]
