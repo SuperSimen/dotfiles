@@ -144,7 +144,7 @@ let g:smart_object_blocks = '(),[],{}'
 hi Normal ctermbg=NONE
 
 function! FloatingTerminal()
-    silent exec "!floating-terminal -d %:p:h &" 
+    silent exec "!floating-terminal -d %:p:h 2> /dev/null" 
 endfunction
 
 let g:deoplete#enable_at_startup = 1
