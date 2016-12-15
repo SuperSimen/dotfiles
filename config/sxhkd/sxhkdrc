@@ -97,8 +97,11 @@ super + @button{1-3}
 super + {_, shift +}Return
 	{termite, floating-terminal}
 
+super + {_,shift + }period
+    bspc node @/ -F {vertical,horizontal}
+
 super + {_,shift + }r
-    bspc desktop -F {vertical,horizontal}
+    bspc node @/ -R {90,-90}
 
 super + {_,shift + }u
     {hideActiveWindow,unhideLastHiddenWindow}
