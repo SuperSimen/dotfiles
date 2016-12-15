@@ -10,10 +10,10 @@ super + w
 	bspc node -c
 
 super + b
-	bspc node -B
+	bspc node @/ -B
 
 super + e
-	bspc node -E
+	bspc node @/ -E
 
 super + {s,f}
     state={floating,fullscreen}; \
