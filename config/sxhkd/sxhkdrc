@@ -20,6 +20,10 @@ super + {s,f}
     bspc query -N -n "focused.$\{state\}" && state=tiled; \
     bspc node -t "$state"
 
+super + t
+    bspc desktop -l next
+
+
 super + shift + f
     bspc desktop -f next.!occupied
 
