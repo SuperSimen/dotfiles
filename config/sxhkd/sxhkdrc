@@ -128,8 +128,8 @@ ctrl + space ; u ; {1,2,3,4,5}
 
 
 #Directories
-ctrl + space ; u ; {r}
-	{termite -d ~/src/rollerskate}
+ctrl + space ; u ; {r,d}
+	{termite -d ~/src/rollerskate, termite -d ~/src/domain-watcher}
 
 # Repl
 ctrl + space ; r ; {n}
