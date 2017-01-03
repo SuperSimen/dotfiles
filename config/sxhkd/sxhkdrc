@@ -127,13 +127,13 @@ ctrl + space ; a ; {s,e,w,p}
 
 
 # SSH
-ctrl + space ; u ; {1,2,3,4}
-	{termite -e 'ssh vil1.net', termite -e 'ssh osl2.net', termite -e 'ssh osl3.net', termite -e 'ssh osl4.net'}
+ctrl + space ; u ; {1,2,3,4,5}
+	{termite -e 'ssh vil1.net', termite -e 'ssh osl2.net', termite -e 'ssh osl3.net', termite -e 'ssh osl4.net', termite -e 'ssh osl5.net'}
 
 
 #Directories
-ctrl + space ; u ; {r}
-	{termite -d ~/src/rollerskate}
+ctrl + space ; u ; {r,d,f}
+	{termite -d ~/src/rollerskate, termite -d ~/src/domain-watcher, termite -d ~/src/form-config }
 
 # Repl
 ctrl + space ; r ; {n}

@@ -21,6 +21,7 @@ set number
 set showcmd
 set wrap
 set mouse=a
+set backupcopy=yes
 
 if !has('nvim')
     set ttymouse=urxvt
