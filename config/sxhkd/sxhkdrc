@@ -20,6 +20,10 @@ super + {s,f}
     bspc query -N -n "focused.$\{state\}" && state=tiled; \
     bspc node -t "$state"
 
+super + t
+    bspc desktop -l next
+
+
 super + shift + f
     bspc desktop -f next.!occupied
 
@@ -124,7 +128,7 @@ ctrl + space ; a ; {s,e,w,p}
 
 # SSH
 ctrl + space ; u ; {1,2,3,4,5}
-	{termite -e 'ssh vil1.net', termite -e 'ssh osl2.net', termite -e 'ssh osl3.net', termite -e 'ssh osl4.net', termite -e 'ssh osl5.net'}
+	{termite -e 'ssh vil1.net', termite -e 'ssh vil2.net', termite -e 'ssh osl3.net', termite -e 'ssh osl4.net', termite -e 'ssh osl5.net'}
 
 
 #Directories

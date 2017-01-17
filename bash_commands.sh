@@ -7,6 +7,7 @@ alias gush='git push'
 alias gull='git pull --rebase'
 
 
+
 function gcom() {
     git commit -m "$1"
 }

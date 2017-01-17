@@ -69,7 +69,7 @@ nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
 nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
 nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 nnore <Leader>et :e /home/simen/.config/termite/config<CR>
-nnore <Leader>ev :e /home/simen/.config/nvim/init.vim<CR>
+nnore <Leader>ev :e /home/simen/dotfiles/vimrc.vim<CR>
 nnore <Leader>i iO
 nnore <Leader>h :tabp<CR>
 nnore <Leader>j :bn<CR>
@@ -81,7 +81,7 @@ nnore <silent> <Leader>b :Buffers<cr>
 nnore <silent> <Leader>f :call ProjectSearch()<cr>
 nnore <silent> <Leader>d :Delaware<cr>
 nnore <silent> <Leader>u :call FloatingTerminal()<CR>
-nnore <silent> <Leader><S-u> :!termite -d %:p:h &<CR>
+nnore <silent> <Leader><S-u> :!termite -d %:p:h 2> /dev/null &<CR>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>p :Project ~/src/
 
@@ -145,7 +145,7 @@ let g:smart_object_blocks = '(),[],{}'
 hi Normal ctermbg=NONE
 
 function! FloatingTerminal()
-    silent exec "!floating-terminal -d %:p:h &" 
+    silent exec "!floating-terminal -d %:p:h 2> /dev/null" 
 endfunction
 
 let g:deoplete#enable_at_startup = 1
