@@ -20,6 +20,9 @@ function gadd() {
     git add "$@"
 }
 
+function trans() {
+    transmission-remote "$@"
+}
 
 # VIM
 function v() {
