@@ -44,4 +44,4 @@ function vman() {
 # OTHER
 alias ls='ls --color=auto'
 
-alias nrepl='lein repl :connect $(cat .nrepl-port)'
+alias nrepl='lein repl :connect $(cat $(git rev-parse --show-toplevel)/.nrepl-port)'
