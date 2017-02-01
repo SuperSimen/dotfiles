@@ -9,5 +9,6 @@ bspc config click_to_focus   true
 bspc config presel_feedback_color \#3db8d3
 
 bspc rule -a Keepassx2 state=floating
+bspc rule -a feh state=floating
 
 source ~/.config/bspwm/config.sh
