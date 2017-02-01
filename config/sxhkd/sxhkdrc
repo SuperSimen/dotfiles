@@ -132,8 +132,8 @@ ctrl + space ; u ; {1,2,3,4,5}
 
 
 #Directories
-ctrl + space ; u ; {r,d,f,i,p}
-	{termite -d ~/src/rollerskate, termite -d ~/src/domain-watcher, termite -d ~/src/form-config, termite -d ~/src/image-compressor, termite -d ~/src/portal }
+ctrl + space ; u ; {r,d,f,t,i,p}
+	{termite -d ~/src/rollerskate, termite -d ~/src/domain-watcher, termite -d ~/src/form-config, termite -d ~/src/test.no, termite -d ~/src/image-compressor, termite -d ~/src/portal  }
 
 # Repl
 ctrl + space ; r ; {n}
