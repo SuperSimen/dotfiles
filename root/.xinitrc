@@ -10,4 +10,5 @@ randomizeWallpaper
 numlockx on
 
 dropbox &
+/home/simen/src/relapse/run.sh &
 exec bspwm
