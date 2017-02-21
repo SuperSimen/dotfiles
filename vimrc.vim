@@ -42,7 +42,6 @@ set splitright
 set splitbelow
 set wildmenu
 set wildignorecase
-set relativenumber
 
 
 
