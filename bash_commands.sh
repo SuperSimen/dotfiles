@@ -27,6 +27,10 @@ function trans() {
     transmission-remote "$@"
 }
 
+function clojure() {
+    lein run -m clojure.main "$@"
+}
+
 # VIM
 function v() {
     nvim "$@"

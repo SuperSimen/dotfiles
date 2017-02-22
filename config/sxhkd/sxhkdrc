@@ -122,8 +122,8 @@ ctrl + space ; {f,s,e,n,c,k}
 	{firefox, spotify, evince, nautilus, chrome, keepassx2}
 
 # Chrome-apps
-ctrl + space ; a ; {s,e,w,p}
-	{chrome --app=https://nettbureau.slack.com, chrome --app=https://www.evernote.com/Home.action, chrome --app=https://www.wunderlist.com/, chrome --app=https://web.skype.com/}
+ctrl + space ; a ; {s,e,w,p,t}
+	{chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action, chromium --app=https://www.wunderlist.com/, chromium --app=https://web.skype.com/, chromium --app=https://trello.com/login}
 
 
 # SSH
@@ -133,7 +133,7 @@ ctrl + space ; u ; {1,2,3,4,5}
 
 #Directories
 ctrl + space ; u ; {r,d,f,t,i,p}
-	{termite -d ~/src/rollerskate, termite -d ~/src/domain-watcher, termite -d ~/src/form-config, termite -d ~/src/test.no, termite -d ~/src/image-compressor, termite -d ~/src/portal  }
+	{termite -d ~/src/rollerskate, termite -d ~/src/domain-watcher, termite -d ~/src/form-config, termite -d ~/src/test.no, termite -d ~/src/image-compressor, termite -d ~/src/portal }
 
 # Repl
 ctrl + space ; r ; {n}
