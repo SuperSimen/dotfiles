@@ -119,11 +119,11 @@ super + space
 
 # Programs
 ctrl + space ; {f,s,e,n,c,k}
-	{firefox, spotify, evince, nautilus, chromium, keepassx2}
+	{firefox, spotify, evince, nautilus, chrome, keepassx2}
 
 # Chrome-apps
 ctrl + space ; a ; {s,e,w,p}
-	{chromium --app=https://nettbureau.slack.com, chromium --app=https://www.evernote.com/Home.action, chromium --app=https://www.wunderlist.com/, chromium --app=https://web.skype.com/}
+	{chrome --app=https://nettbureau.slack.com, chrome --app=https://www.evernote.com/Home.action, chrome --app=https://www.wunderlist.com/, chrome --app=https://web.skype.com/}
 
 
 # SSH

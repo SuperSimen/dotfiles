@@ -11,4 +11,5 @@ numlockx on
 
 dropbox &
 /home/simen/src/relapse/run.sh &
+sudo netctl start wifi &
 exec bspwm

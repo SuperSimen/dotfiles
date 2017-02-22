@@ -7,6 +7,9 @@ alias gull='git pull --rebase'
 
 alias aws-mysql='mysql -h mysql.cmhhf7ibuf7e.eu-central-1.rds.amazonaws.com -u simen -p'
 
+function path() {
+    readlink -f "$1"
+}
 
 function gcom() {
     git commit -m "$1"
