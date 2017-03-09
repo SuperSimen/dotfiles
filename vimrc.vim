@@ -165,6 +165,7 @@ let g:pathfinder_include='/home/simen/Dropbox/documents,
 
 let g:fzf_layout = { 'down': '~15%' }
 
+com! -nargs=1 Ag :call fzf#vim#ag_raw('--follow <args>')
 
 fun! ProjectSearch() 
     exec 'Files ' . s:FindProjectPath()
