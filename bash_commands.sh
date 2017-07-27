@@ -5,7 +5,7 @@ alias gst='git status'
 alias gush='git push'
 alias gull='git pull --rebase'
 
-alias aws-mysql='mysql -h mysql.cmhhf7ibuf7e.eu-central-1.rds.amazonaws.com -u simen -p'
+alias aws-mysql='mysql --ssl-verify-server-cert --ssl-ca=~/.aws/rds-combined-ca-bundle.pem -h mysql.cmhhf7ibuf7e.eu-central-1.rds.amazonaws.com -u simen -D portal -p'
 
 function path() {
     readlink -f "$1"

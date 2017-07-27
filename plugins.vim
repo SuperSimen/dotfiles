@@ -39,6 +39,9 @@ Plug 'lumiliet/snippets'
 Plug 'lumiliet/vim-flack'
 
 Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
+Plug 'xolox/vim-colorscheme-switcher' | Plug 'xolox/vim-misc'
 " Plug 'junegunn/seoul256.vim'
 
 

@@ -2,8 +2,10 @@ so /home/simen/dotfiles/plugins.vim
 
 runtime macros/matchit.vim
 syntax on
-colorscheme gruvbox
+let base16colorspace=256
+colorscheme base16-railscasts
 set background=dark
+set guifont=Inconsolata\ 20
 set autoread
 set nrformats=
 set incsearch
@@ -142,7 +144,7 @@ let g:smart_object_commands = 'c,d,y'
 let g:smart_object_blocks = '(),[],{}'
 
 
-hi Normal ctermbg=NONE
+" hi Normal ctermbg=NONE
 
 function! FloatingTerminal()
     silent exec "!floating-terminal -d %:p:h 2> /dev/null" 
