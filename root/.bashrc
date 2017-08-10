@@ -13,3 +13,7 @@ complete -cf sudo
 stty -ixon
 
 source ~/dotfiles/bash_commands.sh
+source ~/.bash_commands.sh
+
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
