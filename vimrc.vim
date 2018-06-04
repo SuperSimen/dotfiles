@@ -1,11 +1,9 @@
-so /home/simen/dotfiles/plugins.vim
+so /Users/simen/dotfiles/plugins.vim
 
 runtime macros/matchit.vim
 syntax on
-let base16colorspace=256
-colorscheme base16-railscasts
+colorscheme solarized
 set background=dark
-set guifont=Inconsolata\ 20
 set autoread
 set nrformats=
 set incsearch
@@ -25,19 +23,15 @@ set wrap
 set mouse=a
 set backupcopy=yes
 
-if !has('nvim')
-    set ttymouse=urxvt
-endif
-
 set timeoutlen=1000
 set ttimeoutlen=10
 set history=1000
 set tabpagemax=50
 set backspace=2
 set completeopt-=preview
-set directory=/home/simen/.config/nvim/temp"
-set backupdir=/home/simen/.config/nvim/backup"
-set undodir=/home/simen/.config/nvim/undo"
+set directory=/Users/simen/.vim/temp"
+set backupdir=/Users/simen/.vim/backup"
+set undodir=/Users/simen/.vim/undo"
 set backup
 set undofile
 set splitright
@@ -49,8 +43,8 @@ set wildignorecase
 
 let mapleader = "\<Space>"
 
-nore , :
-nore : ,
+" nore , :
+" nore : ,
 nnore <silent> <c-j> <c-w>j
 nnore <silent> <c-k> <c-w>k
 nnore <silent> <c-h> <c-w>h
@@ -65,13 +59,8 @@ cnoremap <Right> <Space><BS><Right>
 
 nnore <silent> <Leader>c :Relapse<CR>
 vnore <silent> <Leader>c :Relapse<CR>
-nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
-" nnore <Leader>em :call OpenMirrorFile()<CR>
-nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
-nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
-nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
-nnore <Leader>et :e /home/simen/.config/termite/config<CR>
-nnore <Leader>ev :e /home/simen/dotfiles/vimrc.vim<CR>
+nnore <Leader>ep :e /Users/simen/dotfiles/plugins.vim<CR>
+nnore <Leader>ev :e /Users/simen/dotfiles/vimrc.vim<CR>
 nnore <Leader>i iO
 nnore <Leader>h :tabp<CR>
 nnore <Leader>j :bn<CR>
@@ -81,10 +70,6 @@ nnore <Leader>t :tabe<CR>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <silent> <Leader>b :Buffers<cr>
 nnore <silent> <Leader>f :call ProjectSearch()<cr>
-nnore <silent> <Leader>d :Delaware<cr>
-nnore <silent> <Leader>u :call FloatingTerminal()<CR>
-nnore <silent> <Leader><S-u> :!termite -d %:p:h 2> /dev/null &<CR>
-nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>p :Project ~/src/
 
 com! -nargs=0 W :call s:SudoSave()
@@ -95,11 +80,6 @@ com! -nargs=0 Ground :call s:GroundToRoot()
 fun! s:OpenProjectFile(file)
     exec "tabe " . a:file . " | lcd " . s:FindProjectPath(a:file)
 endf
-
-
-if has('nvim')
-    tnore <Esc> <c-\><c-n>
-endif
 
 
 
@@ -122,12 +102,12 @@ set laststatus=2   " Always show the statusline
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsSnippetsDir = "~/.config/nvim/plugged/snippets/UltiSnips"
+let g:UltiSnipsSnippetsDir = "~/.vim/plugged/snippets/UltiSnips"
 
 
 
 function! OpenMirrorFile()
-    execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
+    execute "vsp %:p:s?Users/simen?Users/simen/dotfiles?"
 endfunction
 
 set suffixesadd+=.php,.js,.jsx
@@ -144,25 +124,19 @@ let g:smart_object_commands = 'c,d,y'
 let g:smart_object_blocks = '(),[],{}'
 
 
-" hi Normal ctermbg=NONE
-
-function! FloatingTerminal()
-    silent exec "!floating-terminal -d %:p:h 2> /dev/null" 
-endfunction
-
 let g:deoplete#enable_at_startup = 1
 
-let g:pathfinder_include='/home/simen/Dropbox/documents,
-             \/home/simen/.config/nvim/plugged/vim-pathfinder/**,
-             \/home/simen/.config/nvim/plugged/vim-clojure/**,
-             \/home/simen/.config/nvim/plugged/vim-run/**,
-             \/home/simen/.config/nvim/plugged/vim-cold-turkey/**,
-             \/home/simen/.config/nvim/plugged/vim-shell/**,
-             \/home/simen/.config/nvim/plugged/vim-smart-object/**,
-             \/home/simen/.config/nvim/plugged/vim-sessions/**,
-             \/home/simen/.config/nvim/plugged/vim-flack/**,
-             \/home/simen/.config/nvim/plugged/vim-delaware/**,
-             \/home/simen/.config/nvim/plugged/vim-relapse/**'
+let g:pathfinder_include='/Users/simen/Dropbox/documents,
+             \/Users/simen/.vim/plugged/vim-pathfinder/**,
+             \/Users/simen/.vim/plugged/vim-clojure/**,
+             \/Users/simen/.vim/plugged/vim-run/**,
+             \/Users/simen/.vim/plugged/vim-cold-turkey/**,
+             \/Users/simen/.vim/plugged/vim-shell/**,
+             \/Users/simen/.vim/plugged/vim-smart-object/**,
+             \/Users/simen/.vim/plugged/vim-sessions/**,
+             \/Users/simen/.vim/plugged/vim-flack/**,
+             \/Users/simen/.vim/plugged/vim-delaware/**,
+             \/Users/simen/.vim/plugged/vim-relapse/**'
 
 
 let g:fzf_layout = { 'down': '~15%' }

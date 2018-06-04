@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 
 "
@@ -27,7 +27,7 @@ Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'lumiliet/vim-pathfinder'
 Plug 'lumiliet/vim-twig'
 Plug 'lumiliet/vim-run'
-Plug 'lumiliet/vim-delaware'
+" Plug 'lumiliet/vim-delaware'
 " Plug 'lumiliet/vim-cold-turkey'
 " Plug 'lumiliet/vim-shell'
 Plug 'lumiliet/vim-smart-object'
@@ -38,10 +38,10 @@ Plug 'lumiliet/vim-relapse'
 Plug 'lumiliet/snippets'
 Plug 'lumiliet/vim-flack'
 
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
-Plug 'chriskempson/base16-vim'
-Plug 'xolox/vim-colorscheme-switcher' | Plug 'xolox/vim-misc'
+" Plug 'chriskempson/base16-vim'
+" Plug 'xolox/vim-colorscheme-switcher' | Plug 'xolox/vim-misc'
 " Plug 'junegunn/seoul256.vim'
 
 
@@ -58,8 +58,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'rstacruz/sparkup'
 " Plug 'majutsushi/tagbar'
-Plug 'StanAngeloff/php.vim'
-Plug 'shawncplus/phpcomplete.vim'
+" Plug 'StanAngeloff/php.vim'
+" Plug 'shawncplus/phpcomplete.vim'
 Plug 'othree/html5.vim'
 
 "Clojure
