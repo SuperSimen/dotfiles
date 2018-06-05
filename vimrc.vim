@@ -43,8 +43,8 @@ set wildignorecase
 
 let mapleader = "\<Space>"
 
-" nore , :
-" nore : ,
+nore , :
+nore : ,
 nnore <silent> <c-j> <c-w>j
 nnore <silent> <c-k> <c-w>k
 nnore <silent> <c-h> <c-w>h
