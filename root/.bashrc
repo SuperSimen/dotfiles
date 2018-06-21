@@ -11,12 +11,9 @@ fi
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 
-PATH=$PATH:/Users/simen/bin
-
+PATH=$PATH:$HOME/bin
 
 alias gst='git status'
-alias gush='git push'
-alias gull='git pull --rebase'
 
 function gcom() {
     git commit -m "$1"
@@ -33,3 +30,5 @@ function gadd() {
 alias ls='ls -G'
 
 alias nrepl='lein repl :connect $(cat $(git rev-parse --show-toplevel)/.nrepl-port)'
+
+export FZF_DEFAULT_COMMAND='ag --follow -g ""'  # Use ag as for fzf search to respect .gitignore
