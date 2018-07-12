@@ -1,5 +1,7 @@
 so $HOME/dotfiles/plugins.vim
 
+
+
 runtime macros/matchit.vim
 syntax on
 colorscheme gruvbox
@@ -29,9 +31,26 @@ set history=1000
 set tabpagemax=50
 set backspace=2
 set completeopt-=preview
-set directory=$HOME/.vim/temp"
-set backupdir=$HOME/.vim/backup"
-set undodir=$HOME/.vim/undo"
+
+if has("win32")
+    set directory=$HOME/vimfiles/temp
+    set backupdir=$HOME/vimfiles/backup
+    set undodir=$HOME/vimfiles/undo
+else
+    set directory=$HOME/.vim/temp
+    set backupdir=$HOME/.vim/backup
+    set undodir=$HOME/.vim/undo
+endif
+
+if has("gui")
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+    set guifont=Ubuntu_Mono:h12
+endif
+
+
 set backup
 set undofile
 set splitright
@@ -69,12 +88,14 @@ nnore <silent> <Leader>r :RunCode<CR>
 nnore <silent> <Leader>b :Buffers<cr>
 nnore <silent> <Leader>f :call ProjectSearch()<cr>
 nnore <Leader>p :Project ~/src/
+nnore <Leader>o :NERDTreeToggle<cr>
 
 com! -nargs=0 ListSnippets :call UltiSnips#ListSnippets()
-com! -nargs=1 -complete=file Project :call s:OpenProjectFile("<args>")
+com! -nargs=1 -complete=file Project :call g:OpenProjectFile('<args>')
 
-fun! s:OpenProjectFile(file)
-    exec "tabe " . a:file . " | lcd " . s:FindProjectPath(a:file)
+fun! g:OpenProjectFile(file)
+    let filePath = substitute(trim(a:file), '\([^/]$\)', '\1/', '')
+    exec "tabe " . filePath . " | lcd " . s:FindProjectPath(filePath)
 endf
 
 

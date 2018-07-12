@@ -1,4 +1,9 @@
-call plug#begin('~/.vim/plugged')
+if has("win32")
+    call plug#begin('~/vimfiles/plugged')
+else
+    call plug#begin('~/.vim/plugged')
+endif
+
 
 
 "
@@ -18,6 +23,7 @@ Plug 'ervandew/supertab'
 
 Plug 'tpope/vim-eunuch'
 " Plug 'w0rp/ale'
+Plug 'scrooloose/nerdtree'
 
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 " Plug 'Shougo/deoplete.nvim'
@@ -41,7 +47,7 @@ Plug 'lumiliet/vim-sessions'
 Plug 'lumiliet/vim-clojure'
 Plug 'lumiliet/vim-relapse'
 Plug 'lumiliet/snippets'
-Plug 'lumiliet/vim-flack'
+" Plug 'lumiliet/vim-flack'
 
 Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
