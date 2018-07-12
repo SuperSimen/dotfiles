@@ -22,7 +22,7 @@ set ruler
 set number
 set showcmd
 set wrap
-set mouse=a
+"set mouse=a
 set backupcopy=yes
 
 set timeoutlen=1000

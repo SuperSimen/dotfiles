@@ -27,7 +27,6 @@ function gadd() {
     git add "$@"
 }
 
-alias ls='ls -G'
 
 alias nrepl='lein repl :connect $(cat $(git rev-parse --show-toplevel)/.nrepl-port)'
 
