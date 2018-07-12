@@ -22,7 +22,7 @@ set ruler
 set number
 set showcmd
 set wrap
-set mouse=a
+"set mouse=a
 set backupcopy=yes
 
 if !has('nvim')
@@ -35,9 +35,9 @@ set history=1000
 set tabpagemax=50
 set backspace=2
 set completeopt-=preview
-set directory=/home/simen/.config/nvim/temp"
-set backupdir=/home/simen/.config/nvim/backup"
-set undodir=/home/simen/.config/nvim/undo"
+set directory=/home/simen/.vim/temp"
+set backupdir=/home/simen/.vim/backup"
+set undodir=/home/simen/.vim/undo"
 set backup
 set undofile
 set splitright
@@ -65,12 +65,8 @@ cnoremap <Right> <Space><BS><Right>
 
 nnore <silent> <Leader>c :Relapse<CR>
 vnore <silent> <Leader>c :Relapse<CR>
-nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
 " nnore <Leader>em :call OpenMirrorFile()<CR>
 nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
-nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
-nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
-nnore <Leader>et :e /home/simen/.config/termite/config<CR>
 nnore <Leader>ev :e /home/simen/dotfiles/vimrc.vim<CR>
 nnore <Leader>i iO
 nnore <Leader>h :tabp<CR>
@@ -122,7 +118,7 @@ set laststatus=2   " Always show the statusline
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsSnippetsDir = "~/.config/nvim/plugged/snippets/UltiSnips"
+let g:UltiSnipsSnippetsDir = "~/.vim/plugged/snippets/UltiSnips"
 
 
 
@@ -153,16 +149,16 @@ endfunction
 let g:deoplete#enable_at_startup = 1
 
 let g:pathfinder_include='/home/simen/Dropbox/documents,
-             \/home/simen/.config/nvim/plugged/vim-pathfinder/**,
-             \/home/simen/.config/nvim/plugged/vim-clojure/**,
-             \/home/simen/.config/nvim/plugged/vim-run/**,
-             \/home/simen/.config/nvim/plugged/vim-cold-turkey/**,
-             \/home/simen/.config/nvim/plugged/vim-shell/**,
-             \/home/simen/.config/nvim/plugged/vim-smart-object/**,
-             \/home/simen/.config/nvim/plugged/vim-sessions/**,
-             \/home/simen/.config/nvim/plugged/vim-flack/**,
-             \/home/simen/.config/nvim/plugged/vim-delaware/**,
-             \/home/simen/.config/nvim/plugged/vim-relapse/**'
+             \/home/simen/.vim/plugged/vim-pathfinder/**,
+             \/home/simen/.vim/plugged/vim-clojure/**,
+             \/home/simen/.vim/plugged/vim-run/**,
+             \/home/simen/.vim/plugged/vim-cold-turkey/**,
+             \/home/simen/.vim/plugged/vim-shell/**,
+             \/home/simen/.vim/plugged/vim-smart-object/**,
+             \/home/simen/.vim/plugged/vim-sessions/**,
+             \/home/simen/.vim/plugged/vim-flack/**,
+             \/home/simen/.vim/plugged/vim-delaware/**,
+             \/home/simen/.vim/plugged/vim-relapse/**'
 
 
 let g:fzf_layout = { 'down': '~15%' }
