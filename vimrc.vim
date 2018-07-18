@@ -64,10 +64,10 @@ let mapleader = "\<Space>"
 
 nore , :
 nore : ,
-nnore <silent> <c-j> <c-w>j
-nnore <silent> <c-k> <c-w>k
-nnore <silent> <c-h> <c-w>h
-nnore <silent> <c-l> <c-w>l
+nnore <silent> <c-j> <c-w>j<c-w>_
+nnore <silent> <c-k> <c-w>k<c-w>_
+nnore <silent> <c-h> <c-w>h<c-w>_
+nnore <silent> <c-l> <c-w>l<c-w>_
 nnore <Down> gj
 nnore <Up> gk
 

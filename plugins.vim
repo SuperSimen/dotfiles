@@ -19,6 +19,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
 
