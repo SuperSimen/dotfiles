@@ -74,8 +74,8 @@ nnore <Up> gk
 cnoremap <Left> <Space><BS><Left>
 cnoremap <Right> <Space><BS><Right>
 
-nnore <silent> <Leader>c :Relapse<CR>
-vnore <silent> <Leader>c :Relapse<CR>
+nnore <silent> <Leader>c :Eval<CR>
+vnore <silent> <Leader>c :Eval<CR>
 nnore <Leader>ep :e $HOME/dotfiles/plugins.vim<CR>
 nnore <Leader>ev :e $HOME/dotfiles/vimrc.vim<CR>
 nnore <Leader>i iO
@@ -89,6 +89,9 @@ nnore <silent> <Leader>b :Buffers<cr>
 nnore <silent> <Leader>f :call ProjectSearch()<cr>
 nnore <Leader>p :Project ~/src/
 nnore <Leader>o :NERDTreeToggle<cr>
+
+nnore <silent> <Leader>u :call OpenTerminalHere()<cr>
+
 
 com! -nargs=0 ListSnippets :call UltiSnips#ListSnippets()
 com! -nargs=1 -complete=file Project :call g:OpenProjectFile('<args>')
@@ -105,7 +108,13 @@ set laststatus=2   " Always show the statusline
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsSnippetsDir = "~/.vim/plugged/snippets/UltiSnips"
+
+if has("win32")
+    let g:UltiSnipsSnippetsDir = "~/vimfiles/plugged/snippets/UltiSnips"
+else
+    let g:UltiSnipsSnippetsDir = "~/.vim/plugged/snippets/UltiSnips"
+endif
+
 
 set suffixesadd+=.php,.js,.jsx
 
@@ -120,6 +129,15 @@ com! -nargs=1 Ag :call fzf#vim#ag_raw('--follow <args>')
 
 fun! ProjectSearch() 
     exec 'Files ' . s:FindProjectPath()
+endf
+
+fun! OpenTerminalHere() 
+    let directoryOfCurrentFile = fnamemodify(expand("%"), ":h")
+    if has("win32")
+        exec '! start "" PowerShell -NoExit -Command "cd ' . directoryOfCurrentFile . '" & exit'
+    else
+        echo "TODO: Open terminal in this directory"
+    endif
 endf
 
 fun! s:FindProjectPath(...)
@@ -140,3 +158,16 @@ endf
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+
+
+
+" Clojure specific stuff
+autocmd FileType clojure :call s:SetupForClojure()
+
+fun! s:SetupForClojure()
+    setlocal includeexpr=matchlist(matchlist(v:fname,'^[^/]*')[0],'[^\.]*$')[0]
+    setlocal iskeyword=@,48-57,_,192-255,$,?,-,*,!,+,=,<,>,:,$
+    setlocal suffixesadd+=,clj,.cljs
+endf
+
+
