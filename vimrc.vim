@@ -1,4 +1,6 @@
-so /home/simen/dotfiles/plugins.vim
+so $HOME/dotfiles/plugins.vim
+
+
 
 runtime macros/matchit.vim
 syntax on
@@ -20,12 +22,8 @@ set ruler
 set number
 set showcmd
 set wrap
-" set mouse=a
+"set mouse=a
 set backupcopy=yes
-
-if !has('nvim')
-    set ttymouse=urxvt
-endif
 
 set timeoutlen=1000
 set ttimeoutlen=10
@@ -33,9 +31,26 @@ set history=1000
 set tabpagemax=50
 set backspace=2
 set completeopt-=preview
-set directory=/home/simen/.config/nvim/temp"
-set backupdir=/home/simen/.config/nvim/backup"
-set undodir=/home/simen/.config/nvim/undo"
+
+if has("win32")
+    set directory=$HOME/vimfiles/temp
+    set backupdir=$HOME/vimfiles/backup
+    set undodir=$HOME/vimfiles/undo
+else
+    set directory=$HOME/.vim/temp
+    set backupdir=$HOME/.vim/backup
+    set undodir=$HOME/.vim/undo
+endif
+
+if has("gui")
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+    set guifont=Ubuntu_Mono:h12
+endif
+
+
 set backup
 set undofile
 set splitright
@@ -53,23 +68,16 @@ nnore <silent> <c-j> <c-w>j
 nnore <silent> <c-k> <c-w>k
 nnore <silent> <c-h> <c-w>h
 nnore <silent> <c-l> <c-w>l
-nnore <C-e> 3<C-e>
-nnore <C-y> 3<C-y>
 nnore <Down> gj
 nnore <Up> gk
 
 cnoremap <Left> <Space><BS><Left>
 cnoremap <Right> <Space><BS><Right>
 
-nnore <silent> <Leader>c :Relapse<CR>
-vnore <silent> <Leader>c :Relapse<CR>
-nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
-" nnore <Leader>em :call OpenMirrorFile()<CR>
-nnore <Leader>ep :e /home/simen/dotfiles/plugins.vim<CR>
-nnore <Leader>es :e /home/simen/.config/sxhkd/sxhkdrc<CR>
-nnore <Leader>eb :e /home/simen/.config/bspwm/bspwmrc<CR>
-nnore <Leader>et :e /home/simen/.config/termite/config<CR>
-nnore <Leader>ev :e /home/simen/dotfiles/vimrc.vim<CR>
+nnore <silent> <Leader>c :Eval<CR>
+vnore <silent> <Leader>c :Eval<CR>
+nnore <Leader>ep :e $HOME/dotfiles/plugins.vim<CR>
+nnore <Leader>ev :e $HOME/dotfiles/vimrc.vim<CR>
 nnore <Leader>i iO
 nnore <Leader>h :tabp<CR>
 nnore <Leader>j :bn<CR>
@@ -79,89 +87,41 @@ nnore <Leader>t :tabe<CR>
 nnore <silent> <Leader>r :RunCode<CR>
 nnore <silent> <Leader>b :Buffers<cr>
 nnore <silent> <Leader>f :call ProjectSearch()<cr>
-nnore <silent> <Leader>d :Delaware<cr>
-nnore <silent> <Leader>u :call FloatingTerminal()<CR>
-nnore <silent> <Leader><S-u> :!termite -d %:p:h 2> /dev/null &<CR>
-nnore <silent> <Leader>r :RunCode<CR>
 nnore <Leader>p :Project ~/src/
+nnore <Leader>o :NERDTreeToggle<cr>
 
-com! -nargs=0 W :call s:SudoSave()
+nnore <silent> <Leader>u :call OpenTerminalHere()<cr>
+
+
 com! -nargs=0 ListSnippets :call UltiSnips#ListSnippets()
-com! -nargs=1 -complete=file Project :call s:OpenProjectFile("<args>")
-com! -nargs=0 Ground :call s:GroundToRoot()
+com! -nargs=1 -complete=file Project :call g:OpenProjectFile('<args>')
 
-fun! s:OpenProjectFile(file)
-    exec "tabe " . a:file . " | lcd " . s:FindProjectPath(a:file)
+fun! g:OpenProjectFile(file)
+    let filePath = substitute(trim(a:file), '\([^/]$\)', '\1/', '')
+    exec "tabe " . filePath . " | lcd " . s:FindProjectPath(filePath)
 endf
 
 
-if has('nvim')
-    tnore <Esc> <c-\><c-n>
-endif
-
-
-
-"
-" Syntastic
-"
-
-let g:syntastic_enable_signs=1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["jsx"] }
-" let g:syntastic_javascript_checkers = ['eslint']
-
-
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 set laststatus=2   " Always show the statusline
 
 
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsSnippetsDir = "~/.config/nvim/plugged/snippets/UltiSnips"
 
+if has("win32")
+    let g:UltiSnipsSnippetsDir = "~/vimfiles/plugged/snippets/UltiSnips"
+else
+    let g:UltiSnipsSnippetsDir = "~/.vim/plugged/snippets/UltiSnips"
+endif
 
-
-function! OpenMirrorFile()
-    execute "vsp %:p:s?home/simen?home/simen/dotfiles?"
-endfunction
 
 set suffixesadd+=.php,.js,.jsx
-
-function! s:SudoSave()
-    exe ":w ! sudo tee % > /dev/null"
-endfunction
-
-
 
 let &sessionoptions = substitute(&sessionoptions, 'options,', '', '')
 
 let g:smart_object_commands = 'c,d,y'
 let g:smart_object_blocks = '(),[],{}'
-
-
-hi Normal ctermbg=NONE
-
-function! FloatingTerminal()
-    silent exec "!floating-terminal -d %:p:h 2> /dev/null" 
-endfunction
-
-let g:deoplete#enable_at_startup = 1
-
-let g:pathfinder_include='/home/simen/Dropbox/documents,
-             \/home/simen/.config/nvim/plugged/vim-pathfinder/**,
-             \/home/simen/.config/nvim/plugged/vim-clojure/**,
-             \/home/simen/.config/nvim/plugged/vim-run/**,
-             \/home/simen/.config/nvim/plugged/vim-cold-turkey/**,
-             \/home/simen/.config/nvim/plugged/vim-shell/**,
-             \/home/simen/.config/nvim/plugged/vim-smart-object/**,
-             \/home/simen/.config/nvim/plugged/vim-sessions/**,
-             \/home/simen/.config/nvim/plugged/vim-flack/**,
-             \/home/simen/.config/nvim/plugged/vim-delaware/**,
-             \/home/simen/.config/nvim/plugged/vim-relapse/**'
-
 
 let g:fzf_layout = { 'down': '~15%' }
 
@@ -171,8 +131,13 @@ fun! ProjectSearch()
     exec 'Files ' . s:FindProjectPath()
 endf
 
-fun! s:GroundToRoot()
-    exec "lcd " . s:FindProjectPath()
+fun! OpenTerminalHere() 
+    let directoryOfCurrentFile = fnamemodify(expand("%"), ":h")
+    if has("win32")
+        exec '! start "" PowerShell -NoExit -Command "cd ' . directoryOfCurrentFile . '" & exit'
+    else
+        echo "TODO: Open terminal in this directory"
+    endif
 endf
 
 fun! s:FindProjectPath(...)
@@ -188,3 +153,21 @@ fun! s:FindProjectPath(...)
     let path = fnamemodify(path, ':p')
     return path
 endf
+
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
+
+
+" Clojure specific stuff
+autocmd FileType clojure :call s:SetupForClojure()
+
+fun! s:SetupForClojure()
+    setlocal includeexpr=matchlist(matchlist(v:fname,'^[^/]*')[0],'[^\.]*$')[0]
+    setlocal iskeyword=@,48-57,_,192-255,$,?,-,*,!,+,=,<,>,:,$
+    setlocal suffixesadd+=,clj,.cljs
+endf
+
+
