@@ -20,7 +20,7 @@ set ruler
 set number
 set showcmd
 set wrap
-set mouse=a
+" set mouse=a
 set backupcopy=yes
 
 if !has('nvim')

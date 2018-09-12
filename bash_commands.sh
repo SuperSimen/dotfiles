@@ -36,10 +36,6 @@ function v() {
     nvim "$@"
 }
 
-function vim() {
-    nvim "$@"
-}
-
 function vman() {
     manResult=$(man "$1")
     if [ $? -eq 0 ]
