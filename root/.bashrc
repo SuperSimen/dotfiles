@@ -31,3 +31,5 @@ function gadd() {
 alias nrepl='lein repl :connect $(cat $(git rev-parse --show-toplevel)/.nrepl-port)'
 
 export FZF_DEFAULT_COMMAND='ag --follow -g ""'  # Use ag as for fzf search to respect .gitignore
+
+LS_COLORS=$LS_COLORS:'di=0;36' ; export LS_COLORS
